@@ -1,7 +1,7 @@
-# SimpleClosure Coding Challenge: Company Dissolution Tracker
+# Coding Challenge: Company Dissolution Tracker
 
 ## Overview
-In this coding challenge, you will build a React/TypeScript application that helps SimpleClosure users track the status of their company dissolution process. The tracker will provide a clear visual representation of where a user is in the process of shutting down their business.
+In this coding challenge, you will build a React/TypeScript application that helps our users track the status of their company dissolution process. The tracker will provide a clear visual representation of where a user is in the process of shutting down their business.
 
 ## Time Allocation
 - **Recommended time**: 90 minutes
