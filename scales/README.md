@@ -1,4 +1,4 @@
-# scales
+# scales (last edited ~Sept 2024)
 See also: [precourse materials](https://github.com/fractal-bootcamp/precourse-materials)
 
 ### How to do the scales?
