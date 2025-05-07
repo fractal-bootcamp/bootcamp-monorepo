@@ -1,10 +1,10 @@
-# **Basic Survey App**
+# Basic Survey App
 
 ## Overview
 
 Your goal today is to build a simple full-stack application (that means frontend AND backend AND database). You will be using ExpressJS/Hono/[ElysiaJS](https://elysiajs.com/) and React.
 
-You may use Claude / ChatGPT to ask questions, but NOT to copy code. You cannot use Cursor or Github Copilot or any form of AI code-writer. Type every character of code yourself \-- don’t even copy from the docs. You will be surprised how much muscle memory matters.
+You may use Claude / ChatGPT to ask questions, but NOT to copy code. You cannot use Cursor or Github Copilot or any form of AI code-writer. Type every character of code yourself -- don’t even copy from the docs. You will be surprised how much muscle memory matters.
 
 A survey app is exactly what it sounds like: an app to create surveys and collect anonymous survey results. It needs to:
 
@@ -21,7 +21,7 @@ A survey app covers a full stack application. Focus on getting the underlying fu
 - CRUD  
 - Data Modelling  
 - ORMs  
-- React \+ Forms
+- React + Forms
 
 ## Features
 
@@ -72,8 +72,8 @@ Technologies to Use
 
   Some useful commands:
 
-- \`bun create vite\` \-- for creating a frontend  
-- \`bun init\` \-- for creating a backend
+- `bun create vite` -- for creating a frontend  
+- `bun init` -- for creating a backend
 
 ## Deployment
 
@@ -91,5 +91,3 @@ Technologies to Use
 - [**Jake’s Repo From the Morning Demo**](https://github.com/fractal-bootcamp/jakezegil.express-app-day4)
 
 ## Inspiration
-
--

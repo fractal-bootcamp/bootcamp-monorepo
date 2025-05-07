@@ -1,4 +1,4 @@
-# **Product Clone Capstone**
+# Product Clone Capstone
 
 ## Overview
 
@@ -24,7 +24,7 @@ Suggested Schedule
 
 ## Tools
 
-- Project Management \- [Linear](https://linear.app/)  
-- Deployment \- Render, Railway, Netlify
+- Project Management - [Linear](https://linear.app/)  
+- Deployment - Render, Railway, Netlify
 
 ---

@@ -1,4 +1,4 @@
-# **File Upload**
+# File Upload
 
 ## Overview
 
@@ -28,8 +28,6 @@ Your project should have the following:
 - [ ] Authentication  
       - [ ] Configure sharing by email
 
-##
-
 ## Technology to Use
 
 - [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations) \-- use these to use forms that submit data to your server in NextJS  
@@ -45,6 +43,4 @@ Example Repos:
 
 Old stuff:
 
-- [Multer \- File Uploads](https://www.npmjs.com/package/multer)
-
----
+- [Multer - File Uploads](https://www.npmjs.com/package/multer)

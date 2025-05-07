@@ -1,14 +1,16 @@
 # Personal AI Assistant
 
 ## Overview
+
 Create a personal AI chatbot interface that allows users to have conversations, manage chat sessions, and store chat history locally. The app should be built with Next.js using the T3 stack and Vercel's AI SDK. Use SQLite with DrizzleORM for local data storage.
 
 ### Example from LibreChat
+
 [link](https://librechat-librechat.hf.space/c/new)
 ![image](https://github.com/user-attachments/assets/df663db2-62fa-48a8-b182-cc07fa3b0dc8)
 
-
 ## Core Concepts
+
 * Next.js App Router
 * Vercel AI SDK
 * Local data persistence
@@ -18,6 +20,7 @@ Create a personal AI chatbot interface that allows users to have conversations, 
 ## Features
 
 ### Chat Interface
+
 * Real-time message streaming using Vercel AI SDK
 * Local message storage using DrizzleORM + SQLite
 * 1 Main Chat Page:
@@ -26,6 +29,7 @@ Create a personal AI chatbot interface that allows users to have conversations, 
   * Model Selection & Other Settings in some dropdown or modal
 
 ### Chat Sessions List
+
 * Create new chat sessions
 * View existing sessions
 * Components:
@@ -34,6 +38,7 @@ Create a personal AI chatbot interface that allows users to have conversations, 
   * Session List
 
 ### Active Chat Thread
+
 * Real-time message streaming
 * Message persistence
 * Components:
@@ -43,10 +48,12 @@ Create a personal AI chatbot interface that allows users to have conversations, 
   * Error States
 
 ### Settings
+
 * AI model selection
 * Theme settings (lightmode / darkmode)
 
 ## Bonus Features
+
 * Message search
 * Custom chat personas
 * Voice input/output
@@ -56,6 +63,7 @@ Create a personal AI chatbot interface that allows users to have conversations, 
 ## Technologies to Use
 
 ### Required Stack
+
 * Frontend - `bun create t3-app@latest`
   * Next.js
   * TypeScript
@@ -68,6 +76,7 @@ Create a personal AI chatbot interface that allows users to have conversations, 
   * Vercel AI SDK
 
 ## Resources
+
 * [Next.JS AI Cookbook Examples](https://sdk.vercel.ai/cookbook)
 * [Next.JS Ai ChatBot Playground Example Code](https://sdk.vercel.ai/playground/anthropic:claude-v3-sonnet)
 * [Next.js Documentation](https://nextjs.org/docs)
@@ -77,6 +86,7 @@ Create a personal AI chatbot interface that allows users to have conversations, 
 * [Open Source AI Chatbot](https://github.com/danny-avila/LibreChat)
 
 ## Tips
+
 * Use the AI SDK's built-in hooks for managing chat state
 * Leverage TypeScript for type safety across the full stack
 * Use tRPC for type-safe API routes

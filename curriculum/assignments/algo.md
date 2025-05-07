@@ -1,4 +1,4 @@
-# **Algorithms**
+# Algorithms
 
 ## Overview
 
@@ -6,10 +6,10 @@ Create an Algorithm Visualization App that allows users to visualize the executi
 
 ## Core Concepts
 
-- **Algorithms**  
-- **Data Structures**  
-- **Animations & Styling**  
-- **Full-stack Development**
+- Algorithms  
+- Data Structures  
+- Animations & Styling  
+- Full-stack Development
 
 ## Features
 

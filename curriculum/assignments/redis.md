@@ -1,4 +1,4 @@
-# **Redis Queues: Rate Limiting and Click Counting**
+# Redis Queues: Rate Limiting and Click Counting
 
 ## Overview
 
@@ -48,11 +48,9 @@ Your setup should have the following:
 - Node.js  
 - Express.js (optional, for API routing)
 
-### **Inspiration**
+## Inspiration
 
 - [What is a redis queue?](https://redis.io/glossary/redis-queue/)  
 - [Deploying Redis on Railway](https://docs.railway.app/guides/redis)  
 - [Rate limiting with Redis](https://medium.com/@SaiRahulAkarapu/rate-limiting-algorithms-using-redis-eb4427b47e33)  
 - [Go Fiber](https://github.com/gofiber/fiber)
-
----

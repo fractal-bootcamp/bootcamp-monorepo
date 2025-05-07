@@ -1,9 +1,9 @@
-# **Styling**
+# Styling
 
 **TODO:**
 
 - **Swap styling to be tailwindCSS**  
-- **Make sure all styles are responsive \-- responsiveness is very important\!\!**
+- **Make sure all styles are responsive -- responsiveness is very important!!**
 
 ## Overview
 
@@ -15,13 +15,13 @@
 
 Create 6 pixel-perfect components in React. Create a PR for each component. Use SCSS for some components, and tailwind for others. Start with whatever you’re most comfortable with.
 
-Subskills
+## Subskills
 
 - Selectors  
 - Properties  
 - Layout (Flexbox)  
-- Top 20 properties \- margin, padding, width, height, position, flex, z-index, overflow, color, font-size, font-weight, align, justify, border, border-radius, box-shadow  
-- Images \- border-radius, object-fit  
+- Top 20 properties - margin, padding, width, height, position, flex, z-index, overflow, color, font-size, font-weight, align, justify, border, border-radius, box-shadow  
+- Images - border-radius, object-fit  
 - Flexbox
 
 ## Requirements
@@ -42,7 +42,7 @@ Bonus:
 
 ## Resources
 
-- Boilerplate: npx create-vite \--template typescript  
+- Boilerplate: npx create-vite --template typescript  
 - Deployment: [Vercel](https://vercel.com/)  
 - [**Flexbox Froggy (if you don’t understand flexbox, do this first)**](https://flexboxfroggy.com/)  
 - [**CSS Diner (if you don’t understand selectors, do this first)**](https://flukeout.github.io/)

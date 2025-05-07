@@ -1,4 +1,4 @@
-# **Integrations \- Mailing List Builder**
+# Integrations - Mailing List Builder
 
 ## Overview
 
@@ -43,12 +43,12 @@ Bonus:
 ## Technologies to Use
 
 - Boilerplate  
-  - Shell script \- app can be built with your preferred stack  
+  - Shell script - app can be built with your preferred stack  
 - Tools  
   - [resend](https://resend.com/)  
   - [SendGrid](https://www.npmjs.com/package/@sendgrid/mail) or [MailGun](https://www.mailgun.com/)  
-  - Google Sheets \- [https://developers.google.com/sheets/api/guides/concepts](https://developers.google.com/sheets/api/guides/concepts)  
-  - Rich Text/Markdown \- [https://tiptap.dev/docs/editor/getting-started/install/react](https://tiptap.dev/docs/editor/getting-started/install/react) OR [draft.js](http://draft.js) ([https://www.npmjs.com/package/draft-js-export-html](https://www.npmjs.com/package/draft-js-export-html))  
+  - [Google Sheets](https://developers.google.com/sheets/api/guides/concepts)  
+  - [Rich Text/Markdown](https://tiptap.dev/docs/editor/getting-started/install/react) OR [draft.js](http://draft.js) ([https://www.npmjs.com/package/draft-js-export-html](https://www.npmjs.com/package/draft-js-export-html))  
   - [React-email](https://react.email/)
 
 ## Installation Instructions
@@ -57,7 +57,5 @@ Bonus:
 
 ## Inspiration
 
-- Google sheets \- [https://hackernoon.com/how-to-use-google-sheets-api-with-nodejs-cz3v316f](https://hackernoon.com/how-to-use-google-sheets-api-with-nodejs-cz3v316f)  
+- [Google sheets](https://hackernoon.com/how-to-use-google-sheets-api-with-nodejs-cz3v316f)  
 - [https://docs.github.com/en/rest/users](https://docs.github.com/en/rest/users)
-
----

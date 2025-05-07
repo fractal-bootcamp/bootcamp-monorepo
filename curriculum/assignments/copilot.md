@@ -1,17 +1,17 @@
-**AI Copilot Chat for Task Management**
+# AI Copilot Chat for Task Management
 
-### Overview
+## Overview
 
 Expand on the task management app by incorporating an AI-powered copilot that can assist users in drafting tasks and epics. This AI copilot should help users generate task descriptions and group related tasks into epics (logical bundles of tickets). Epics can contain multiple tasks, each with its own title, description, and status. Use Instructor for structured output.
 
-### Core Concepts
+## Core Concepts
 
 - AI Chat  
 - AI Structured Output
 
-### Features
+## Features
 
-#### Core Features
+### Core Features
 
 The following features should be built on top of the existing task management application:
 
@@ -42,7 +42,7 @@ The following features should be built on top of the existing task management ap
 - [ ] Epic Overview Page  
       - [ ] Create a new page to view all epics, including an AI summary of the epic (overall status, etc)
 
-### Technologies to Use
+## Technologies to Use
 
 - Instructor \- [https://github.com/instructor-ai/instructor-js](https://github.com/instructor-ai/instructor-js)  
 - Open AI \- [https://github.com/openai/openai-node](https://github.com/openai/openai-node)  

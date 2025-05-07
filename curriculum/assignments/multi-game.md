@@ -1,8 +1,4 @@
-# **Multi-Client Game**
-
-## Practice
-
-- [Javascript Arrays Level 5-6](https://www.executeprogram.com/courses/javascript-array) (you should have already done 1-4)
+# Multi-Client Game
 
 ## Lecture Code
 
@@ -10,7 +6,7 @@
 
 Make your simple game multi-client. You should be able to play on multiple computers/browser which talk to each other. You’ll need to add a way to discover games that have only one person, manage “connection state” on the server, and sync game state between server and multiple clients.
 
-\[Websockets\] \- Use websockets for data transmission:
+Use websockets for data transmission:
 
 - [https://elysiajs.com/patterns/websocket](https://elysiajs.com/patterns/websocket)  
 - [https://socket.io/docs/v4/tutorial/introduction](https://socket.io/docs/v4/tutorial/introduction)
@@ -24,7 +20,7 @@ Make your simple game multi-client. You should be able to play on multiple compu
 
 ## Features
 
-Your multi-client game should add additional views to your [simple game](https://docs.google.com/document/d/1WFllqnmhnDbdjO6qw19XHHcWAC97rhAiEx20Nz7_ksI/edit#heading=h.cbnbckf7v7x0):
+Your multi-client game should add additional views to your [simple game](./simple-game.md):
 
 - [ ] 1 New View  
       - [ ] Lobby  
@@ -40,17 +36,17 @@ Your multi-client game should add additional views to your [simple game](https:/
 
 Bonus:
 
-- [ ] \[Styling\] \- Animations for game moves (react-spring, framer, keyframes)
+- [ ] Styling - Animations for game moves (react-spring, framer, keyframes)
 
 ## Technologies to Use
 
 - Boilerplate  
-  - Frontend \- bun create vite  
-  - Backend \- elysia setup, game server setup
+  - Frontend - bun create vite  
+  - Backend - elysia setup, game server setup
 
 ## Installation Instructions
 
--
+
 
 ## Inspiration
 

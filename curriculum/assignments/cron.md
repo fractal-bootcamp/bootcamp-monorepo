@@ -1,4 +1,4 @@
-# **Cron Jobs**
+# Cron Jobs
 
 ## Overview
 
@@ -55,14 +55,10 @@ Your setup should have the following:
 
    1. Hint: \`crontab\`
 
-###
-
-### **Inspiration**
+## Inspiration
 
 - [AWS EC2 Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-connect-to-instance)  
 - [Cron Documentation](https://man7.org/linux/man-pages/man5/crontab.5.html)  
 - [Installing Crontab on AMI](https://jainsaket-1994.medium.com/installing-crontab-on-amazon-linux-2023-ec2-98cf2708b171)  
 - [What is SSH?](https://www.techtarget.com/searchsecurity/definition/Secure-Shell)  
 - [Mailjet Documentation](https://www.mailjet.com/)
-
----

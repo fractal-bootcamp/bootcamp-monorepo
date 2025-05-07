@@ -1,14 +1,6 @@
-# **Authentication (2 days)**
+# Authentication (2 days)
 
 [https://github.com/fractal-bootcamp/jakezegil.express-app-day4](https://github.com/fractal-bootcamp/jakezegil.express-app-day4)
-
-## Practice
-
-*Include your Practice completion (and any notes) in your status report (in addition to the 3 PRs).*  
-*Each day’s practice is estimated to take \~30 minutes. Don’t get rabbitholed on these.*
-
-- Day 1: [Javascript Arrays Level 1-2](https://www.executeprogram.com/courses/javascript-array)  
-- Day 2: [Javascript Arrays Level 3-4](https://www.executeprogram.com/courses/javascript-array)
 
 ## Reading
 

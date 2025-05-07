@@ -1,4 +1,4 @@
-# **Personal Website**
+# Personal Website
 
 ## Overview
 
@@ -39,8 +39,6 @@ Bonus:
 - [https://magicui.design/docs](https://magicui.design/docs)  
 - [https://motion.dev/](https://motion.dev/)
 
-##
-
 ## Inspiration
 
 - [https://notes.andymatuschak.org/About\_these\_notes](https://notes.andymatuschak.org/About_these_notes)  
@@ -55,5 +53,5 @@ Bonus:
 - [https://worrydream.com/Home2011/](https://worrydream.com/Home2011/)  
 - [https://root.vc](https://root.vc)  
 - owimer.co  
-- Mahlen.dev  
+- Mahlen.dev
 -

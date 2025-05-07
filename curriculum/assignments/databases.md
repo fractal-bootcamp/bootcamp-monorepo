@@ -1,4 +1,4 @@
-# **Databases**
+# Databases
 
 ## Overview
 
@@ -53,10 +53,10 @@ Install these things globally:
 
 In your project:
 
-- \`npx prisma migrate dev\`  
-- ^ but also, read the prisma docs\!  
-- You can use bun to run scripts \-- \`bun run my\_db\_script.ts\`  
-- ^ but also, read the bun docs\!
+- `npx prisma migrate dev`  
+- ^ but also, read the prisma docs!  
+- You can use bun to run scripts -- `bun run my_db_script.ts`  
+- ^ but also, read the bun docs!
 
 ## Inspiration
 
@@ -67,5 +67,5 @@ In your project:
 - [Running a script in Typescript](https://jakezegil.substack.com/p/typescript-scripts-quickstart)  
 - [https://www.postgresqltutorial.com/](https://www.postgresqltutorial.com/)
 
-Stuff To Learn:  
-[Learn SQL](https://www.executeprogram.com/courses/sql).  
+Stuff To Learn:
+[Learn SQL](https://www.executeprogram.com/courses/sql).

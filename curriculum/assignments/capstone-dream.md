@@ -7,8 +7,9 @@ This is your shot to build that thing you've been thinking about forever. One we
 You're creating an application you've always wanted to build. Something meaningful to you. Something you'd use yourself. Something that solves a real problem for real people.
 
 Technical requirements:
+
 - Must be a full-stack application
-- Must leverage cloud infrastructure 
+- Must leverage cloud infrastructure
 - Must use AI tools extensively throughout development (V0, Claude SDK, RAG systems, etc.)
 - Must be deployed and publicly accessible
 - Must be open source with complete GitHub documentation
@@ -19,6 +20,7 @@ Technical requirements:
 This project requires you to build in public. Full transparency. No hiding your process or progress.
 
 Requirements:
+
 - **Day 0**: Tweet/post announcing what you're building and why it matters to you
 - **Days 1-5**: Daily updates sharing:
   - What you accomplished today
@@ -30,6 +32,7 @@ Requirements:
 - **Post-Launch**: Document user feedback and iterations publicly
 
 If Twitter/X isn't your platform, you must create a Substack and publish daily updates there. These updates should include:
+
 - Detailed breakdown of your progress
 - Code snippets of interesting solutions (with AI attribution when relevant)
 - Screenshots/recordings of the evolving UI
@@ -61,6 +64,7 @@ This is the project that shows you're not just a student who completed some cour
 You'll have support when you need it, but the focus is on you building and shipping.
 
 If AI can generate it, don't waste time on it. Use AI for:
+
 - Boilerplate code
 - Documentation
 - Testing
@@ -69,6 +73,7 @@ If AI can generate it, don't waste time on it. Use AI for:
 - API designs
 
 Focus your human creativity on:
+
 - The core problem you're solving
 - User experience refinement
 - Finding real users
@@ -77,6 +82,7 @@ Focus your human creativity on:
 ## Evaluation
 
 Your success is measured by:
+
 1. Does your app exist and work?
 2. Is someone actually using it?
 3. Did you build something meaningful to you?
