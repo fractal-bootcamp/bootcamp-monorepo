@@ -12,8 +12,8 @@ RAG
 Structured output
 Voice/Video/Web
 Agentic Behavior
-[Global State](../assignments/wk7-global.md)
-[AI Copilot](../assignments/wk7-copilot.md)
+[Global State](../assignments/global.md)
+[AI Copilot](../assignments/copilot.md)
 
 ## Practice
 

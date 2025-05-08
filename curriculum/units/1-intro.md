@@ -18,10 +18,10 @@ By the end of the first week, most students should be able to pass the “Calcul
 
 ## Projects
 
-[Personal Website](../assignments/wk1-website.md)
-[Styling](../assignments/wk1-styling.md)
-[Databases](../assignments/wk1-databases.md)
-[Survey App](../assignments/wk1-survey.md)
+[Personal Website](../assignments/website.md)
+[Styling](../assignments/styling.md)
+[Databases](../assignments/databases.md)
+[Survey App](../assignments/survey.md)
 
 ## Practice
 

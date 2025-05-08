@@ -9,7 +9,7 @@ Covering advanced backend concepts, like DDD and 3NF, and building an APIaaS usi
 ## Projects
 
 API-as-a-Service
-[Redis Queues: Rate Limiting and Click Counting](../assignments/wk8-redis.md)
+[Redis Queues: Rate Limiting and Click Counting](../assignments/redis.md)
 
 ## Practice
 

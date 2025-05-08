@@ -14,8 +14,8 @@ A crash course in algorithms and data structures, along with a class-wide projec
 
 ## Projects
 
-[Algorithms](../assignments/wk3-algo.md)
-[File Upload](../assignments/wk3-file.md)
+[Algorithms](../assignments/algo.md)
+[File Upload](../assignments/file.md)
 
 ## Practice
 

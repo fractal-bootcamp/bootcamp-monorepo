@@ -15,11 +15,14 @@ Your new skills will be put to the test with rapid development of an online mult
 
 ## Projects
 
-[Authentication](../assignments/wk2-auth.md)
-[Simple Game](../assignments/wk2-simple-game.md)
-[Multi-Client Game](../assignments/wk2-multi-game.md)
+[Authentication](../assignments/auth.md)
+[Simple Game](../assignments/simple-game.md)
+[Multi-Client Game](../assignments/multi-game.md)
 
 ## Practice
+
+*Include your Practice completion (and any notes) in your status report (in addition to the 3 PRs).*  
+*Each day’s practice is estimated to take \~30 minutes. Don’t get rabbitholed on these.*
 
 [Javascript Arrays (1-6)](https://www.executeprogram.com/courses/javascript-array)
 
