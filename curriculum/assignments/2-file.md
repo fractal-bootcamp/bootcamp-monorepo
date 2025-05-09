@@ -36,6 +36,9 @@ Your project should have the following:
 - [https://uploadthing.com/](https://uploadthing.com/)  
 - Eg: [https://vercel.com/templates/next.js/aws-s3-image-upload-nextjs](https://vercel.com/templates/next.js/aws-s3-image-upload-nextjs)
 
+Example Apps:
+- [Theo's Google Drive Clone](https://www.youtube.com/watch?v=c-hKSbzooAg)
+
 Example Repos:
 
 - [Upload1](https://github.com/fractal-bootcamp/upload1) (aws server actions)  
