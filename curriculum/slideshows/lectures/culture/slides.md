@@ -4,39 +4,50 @@ theme: mint
 # some information about your slides (markdown enabled)
 title: Fractal Accelerator Culture
 layout: cover
+image: ./cover.webp
 ---
 
 # Fractal AI Accelerator Culture
 
+---
+---
+
+# The Power of Culture
+
+<v-clicks>
+
+- Fractal isn't just a bootcamp, it's a bet on the future of education
+- Education in 10 years is going to be completely different
+- Let's build what it looks like, right here
+- The world is changing fast. Knowledge is commoditizing & changing every day
+- We need a culture that can keep up with constant change. This is our "secret sauce"
+</v-clicks>
+
 <!-- 
 Fractal isn’t just a bootcamp. It’s a bet that the way people learn is about to change.
 
-We’re building something that wouldn’t have made sense 15 years ago. But now, with AI and the internet, the default model of education is starting to look outdated.
+We’re building something that wouldn’t have made sense 15 years ago. But now, with AI and the internet, 
+the default model of education is starting to look outdated.
 
 If the world is changing this fast, we need a culture that helps people keep up—and ideally, lead.
 
 This slide deck is an attempt to name the principles behind that culture. This is our
 secret sauce.
  -->
-
 ---
 layout: image-right
+image: ./paris.png
 ---
 
 # A bit about Paris
 
 <v-clicks>
 
-- Programming since 12
-- 3 years at a startup, 3 years SWE @ Google, 4 years SWE @ Netflix
+- Programming since 12, 3 years at a startup, 3 years SWE @ Google, 4 years SWE @ Netflix
 - Quit my job and came to teach all of you
-- "Education Accelerationist"
-    - Education in 10 years is going to be completely different
-    - Let's build what it looks like, right here, right now
 - Valedictorian of my high school, but...
 - Rejected from all the colleges I wanted to go to
-- Didn't go to college, searched for a job entirely self-taught instead
-- One of the scariest things I've done
+- Didn't go to college, one of the scariest things I've done
 - The knowledge and work was easy, the mindset unlock was the hard part!
 
 </v-clicks>
@@ -48,18 +59,13 @@ Professionally, I’ve worked at a startup, then at Google, then Netflix. I've w
 
 I quit my job and now I'm here to teach all of you.
 
-I'm an education accelerationist: what does that mean? It means I believe deeply in a world
-where education happens unrecognizably different than it does today. The
-internet and AI has unlocked learning in a way that absolutely nobody is taking advantage of
-properly yet. Fractal AI Accelerator is a key part of that vision.
-
 I did well in high school. I got perfect test scores, valedictorian. 
 
 But I got rejected from every top college I applied to. 
 
 That forced a choice: take the normal path anyway, or try something different. I chose different. I taught myself, found a job without a degree, and built a career from scratch.
 
-Saying no to the traditional path was perhaps the scaariest thing I've ever done, and nearly
+Saying no to the traditional path was perhaps the scariest thing I've ever done, and nearly
 everyone in my life told me not to do it. 
 
 But it didn't end up being that hard. 
@@ -101,35 +107,35 @@ It doesn’t have to be fun all the time, but there should be moments of joy and
 reach out, and we’ll help you find them.
  -->
 ---
+layout: image-right
+image: college.gif
 ---
 # This is not a traditional school
 
 <v-clicks>
 
-- There are no grades, gold stars, "training wheels"
+- There are no grades, "training wheels", credentials, elitism... just good work.
 - Good education is as close to real-world problems as possible
 - Our main principle: "will this help students get a job?"
 - Our "edge" is not our curriculum. It's our taste, expertise, and culture
     - Everything we teach you is public!
 - You're the one paying! WE serve YOU.
-    - You can't "get in trouble"
     - If we aren't helping you the way you need, call it out
 - Flip side: Your outcomes are your responsibility
 
 </v-clicks>
 
 <!-- 
-TODO: add a meme here
-There are no grades. No rubrics. We don't have the time to do that. 
+There are no grades. No rubrics. We don't believe in credentials or elitism, just good work
 
 Good education looks as close to real world work as possible. 
 
 Our guiding principle for the curriculum is "will this help students get a job?" If you don't think
 it will, let us know so we can talk about it!
 
-Our "edge" is not our curriculum. Everything we teach is public. You could find it on your own.
-But we’ve built a system to help you learn it faster, with more feedback, and in better company.
-That's our secret sauce, and that's why talking about culture on day 1 is so important.
+Our "edge" is not our curriculum. Everything we teach is public. But we’ve built a system to help 
+you learn it faster, with more feedback, and in better company. That's our secret sauce, and 
+that's why talking about culture on day 1 is so important.
 
 We’re not gatekeepers. You’re paying to be here, which means we serve you. If you don't like the
 way your hair stylist is cutting your hair, you ask for something else. Likewise, if you don't 
@@ -176,6 +182,8 @@ just like you, just much further along the path.
 -->
 
 ---
+layout: image-right
+image: ./fractal.webp
 ---
 # Community as a Resource
 
@@ -193,7 +201,6 @@ just like you, just much further along the path.
 </v-clicks>
 
 <!-- 
-TODO: add a meme here (or nearby)
 One of the foundational principles of Fractal, not just the bootcamp but the whole project,
 is that community is essential to human thriving. 
 
@@ -212,11 +219,15 @@ well-being than my cracked coding skills has.
 -->
 
 ---
+layout: image-left
+image: ./hackers.gif
+---
 
 # Hacker Ethos
 
 <v-clicks> 
 
+- They look cool
 - Hackers built most of the internet (and Fractal)
     - They don't ask for permission
 - Work out in the open
@@ -225,12 +236,14 @@ well-being than my cracked coding skills has.
     - minimal, justified authority
     - first principles thinking, no secret knowledge
 - Everything is editable
-    - Our curriculum, like our code, is on GitHub! Make a PR!
+    - Our curriculum, like our code, is on GitHub! Make a PR for these slides!
 
 </v-clicks>
 
 <!--
-Fractal is a big believer in the hacker ethos. Most of the software we use today was built by
+Fractal is a big believer in the hacker ethos. Mostly just because they look cool.
+
+No, I'm joking. Most of the software we use today was built by
 people who didn’t wait for permission. That’s the mindset we want you to practice.
 
 We do what we do out in the open, for everyone to see. This has three benefits: it holds us 
@@ -254,24 +267,23 @@ You can see it, fork it, suggest changes to it.
 <v-clicks>
 
 - We are agreeing to:
-- This should feel hard. You should be changing week over week
-- But this is a marathon, not a sprint. Make sure it's sustainable and "fun"
-- Give yourself permission to do whatever it takes
+- Working hard as hell
+- Running a marathon, not a sprint. Make sure it's sustainable and "fun"
+- Giving yourself permission to do whatever it takes
     - There will be emotional, logistical, personal blockages
-- Work in public, in community, with radical honesty and ambition
-- Your instructors have agreed to all of this too!
-    - Make sure we are helping you exactly how you need
-- TODO: add transition or inspiring story to this:
-- You're in control of your own outcomes
-    - If something isn't working for you, let's figure it out together
+- Working in public, in community, with radical honesty and ambition
+- Holding your instructors accountable, and getting their help
+- Being in control of your own outcomes
+    - It's your responsibility to tell us what's not working 
+    - Then, let's figure it out together
 
 </v-clicks>
 
 <!--
 So, to summarize the culture we agree to abide by here:
 
-This program should stretch you. You should be changing week over week. If you’re not, 
-something’s missing. 
+Working hard as hell. This program should stretch you. You should be changing week over week.
+If you’re not, something’s missing. 
 
 But this isn’t about burnout. It's a marathon, not a sprint. You need a pace that’s 
 intense but sustainable.
@@ -288,3 +300,9 @@ call us out!
 In the end, this is your program. You get out what you put in. If it’s not working, 
 let’s fix it together.
 -->
+
+---
+layout: end
+---
+
+# Let's get to work!
