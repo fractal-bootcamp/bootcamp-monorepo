@@ -237,6 +237,7 @@ image: ./hackers.gif
     - first principles thinking, no secret knowledge
 - Everything is editable
     - Our curriculum, like our code, is on GitHub! Make a PR for these slides!
+    - Project requirements too! Change/improve/personalize them!
 
 </v-clicks>
 
@@ -255,9 +256,13 @@ justified it with their hard work and knowledge. We think from first principles 
 don't believe in gatekeeping knowledge. 
 
 We also don't believe in gatekeeping systems or goals. To hackers, everything is editable.
-If you don’t like how something works, you have the tools to improve it. That’s the real 
-lesson. We publish our curriculum the same  way we write  our code: in the open, on GitHub. 
-You can see it, fork it, suggest changes to it.
+If you don’t like how something works, you have the tools to improve it.
+
+We publish our curriculum the same way we write our code: in the open, on GitHub. 
+You can see it, fork it, suggest changes to it. This goes for projects, too! Our
+first project is a tic tac toe board. Want to do connect 4, or battleship, or
+tetris instead? Great! Go for it! It's your life, your work, your skills. But
+maybe ask us before you do it, since we will know more about how hard it'll be.
 -->
 
 ---
