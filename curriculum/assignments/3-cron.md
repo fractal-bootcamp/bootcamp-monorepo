@@ -1,5 +1,9 @@
 # Cron Jobs
 
+## TODO:
+- consider removing the EC2 requirement in favor of Vercel/Next.JS crons, or val.town or some simple cron app.
+- but idk maybe keep it lol.
+
 ## Overview
 
 In this project, you will learn how to spin up an EC2 instance, deploy a cron job on it, and send an email notification via a Node.js script. The cron job will execute the Node.js script at specified intervals to send an email.
