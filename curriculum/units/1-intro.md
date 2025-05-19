@@ -7,9 +7,9 @@ Kicking off the class, we’ll start by building a board game to cover best prac
 By the end of the first week, most students should be able to pass the “Calculator Exam”, a hiring test Jake gave to all junior candidates at Tenet.
 
 ## Readings
-[There is no speed limit](https://sive.rs/kimo)
-[Speed matters](https://www.scattered-thoughts.net/writing/speed-matters/)
-[95%ile isn’t that good](https://danluu.com/p95-skill/)
+- [There is no speed limit](https://sive.rs/kimo)
+- [Speed matters](https://www.scattered-thoughts.net/writing/speed-matters/)
+- [95%ile isn’t that good](https://danluu.com/p95-skill/)
 [Moving Faster](https://www.scattered-thoughts.net/writing/moving-faster/)
 [Software Pathfinding](https://grantslatton.com/software-pathfinding)
 [Look Stupid](https://danluu.com/look-stupid/)
