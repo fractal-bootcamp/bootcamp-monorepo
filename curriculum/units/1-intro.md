@@ -10,17 +10,17 @@ By the end of the first week, most students should be able to pass the “Calcul
 - [There is no speed limit](https://sive.rs/kimo)
 - [Speed matters](https://www.scattered-thoughts.net/writing/speed-matters/)
 - [95%ile isn’t that good](https://danluu.com/p95-skill/)
-[Moving Faster](https://www.scattered-thoughts.net/writing/moving-faster/)
-[Software Pathfinding](https://grantslatton.com/software-pathfinding)
-[Look Stupid](https://danluu.com/look-stupid/)
-[How I Became A Programmer](https://mattdeboard.net/2011/11/23/how-i-became-a-programmer/)
+- [Moving Faster](https://www.scattered-thoughts.net/writing/moving-faster/)
+- [Software Pathfinding](https://grantslatton.com/software-pathfinding)
+- [Look Stupid](https://danluu.com/look-stupid/)
+- [How I Became A Programmer](https://mattdeboard.net/2011/11/23/how-i-became-a-programmer/)
 
 ## Projects
 
-[Simple Game](../assignments/simple-game.md)
-[Pixel Perfect Styling](../assignments/styling.md)
-[Multi-Client Game](../assignments/multi-game.md)
-[Authentication](../assignments/auth.md)
+- [Simple Game](../assignments/simple-game.md)
+- [Pixel Perfect Styling](../assignments/styling.md)
+- [Multi-Client Game](../assignments/multi-game.md)
+- [Authentication](../assignments/auth.md)
 
 ## Practice
 *Include your Practice completion (and any notes) in your status report (in addition to the 3 PRs).*  
