@@ -17,9 +17,9 @@ By the end of the first week, most students should be able to pass the “Calcul
 
 ## Projects
 
-- [Simple Game](../assignments/simple-game.md)
+- [Simple Game](../assignments/1-simple-game.md)
 - [Pixel Perfect Styling](../assignments/styling.md)
-- [Multi-Client Game](../assignments/multi-game.md)
+- [Multi-Client Game](../assignments/1-multi-game.md)
 - [Authentication](../assignments/auth.md)
 
 ## Practice
