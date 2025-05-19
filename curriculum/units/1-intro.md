@@ -2,12 +2,11 @@
 
 ## Description
 
-Kicking off the class, we’ll start by spinning up a personal site, going over CRUD best practices, and making your first portfolio project!
+Kicking off the class, we’ll start by building a board game to cover best practices for managing state and UI/UX.
 
 By the end of the first week, most students should be able to pass the “Calculator Exam”, a hiring test Jake gave to all junior candidates at Tenet.
 
 ## Readings
-
 [There is no speed limit](https://sive.rs/kimo)
 [Speed matters](https://www.scattered-thoughts.net/writing/speed-matters/)
 [95%ile isn’t that good](https://danluu.com/p95-skill/)
@@ -18,20 +17,25 @@ By the end of the first week, most students should be able to pass the “Calcul
 
 ## Projects
 
-[Personal Website](../assignments/website.md)
-[Styling](../assignments/styling.md)
-[Databases](../assignments/databases.md)
-[Survey App](../assignments/survey.md)
+[Simple Game](../assignments/simple-game.md)
+[Pixel Perfect Styling](../assignments/styling.md)
+[Multi-Client Game](../assignments/multi-game.md)
+[Authentication](../assignments/auth.md)
 
 ## Practice
+*Include your Practice completion (and any notes) in your status report (in addition to the 3 PRs).*  
+*Each day’s practice is estimated to take \~30 minutes. Don’t get rabbitholed on these.*
+
+[Javascript Arrays (1-6)](https://www.executeprogram.com/courses/javascript-array)
 
 ## Skills
 
-- shipping
-- personal taste / personal style
-- pixel perfect styling
-- databases (postgreSQL)
-- full-stack e2e DB -> server -> client
+- auth
+- interactive websites/react
+- database/shared state
+- code reviews
+- functional programming
+- websockets / http
 
 ## Missing
 
