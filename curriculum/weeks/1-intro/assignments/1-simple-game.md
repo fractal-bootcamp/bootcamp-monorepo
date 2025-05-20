@@ -42,8 +42,6 @@ Other Student Projects:
 - [Tetris (Brian Smiley)](https://bs-tetris.netlify.app/)  
 - Go (Lui Smyth)  
 - [Crosswords (Lui Smyth)](https://croxxword.com/)  
-
-
 - [https://playtictactoe.org/](https://playtictactoe.org/)  
 - [https://kevinshannon.com/connect4/](https://kevinshannon.com/connect4/)  
 - [https://www.gameaipro.com/](https://www.gameaipro.com/)
