@@ -1,5 +1,8 @@
 # Algorithms
 
+## Time:
+- ~3 full days
+
 ## Overview
 
 Create an Algorithm Visualization App that allows users to visualize the execution of various algorithms. The app should include visualizations for several search algorithms, sort algorithms, and at least one advanced algorithm such as path planning. The visualizations should be interactive and help users understand how these algorithms work step-by-step.
