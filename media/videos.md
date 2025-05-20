@@ -24,6 +24,10 @@ Here are some videos that you can watch to understand software engineering bette
 - [Simple Made Easy](https://www.youtube.com/watch?v=F87PtAoJNtg), Rich Hickey (12 min short, or 1 hour in full. I recommend the full talk, but linked to the short one. The long one can be found [here](https://www.youtube.com/watch?v=SxdOUGdseq4))
 - [The Mess We're In](https://www.youtube.com/watch?v=lKXe3HUG2l4), Joe Armstrong (1 hour) -- a talk about the state of software engineering and what we can do to improve it.
 
+### LLMs:
+- [How I Use LLMs](https://www.youtube.com/watch?v=EWvNQjAaOHw&t=16s), Andrey Karpathy (2hr, 10 min)
+- [Zero to Hero course, build GPT2 from scratch](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ), Andrey Karpathy (~10 lectures)
+
 
 ### Algorithms
 - [Quicksort](https://www.youtube.com/watch?v=XE4VP_8Y0BU), Numberphile (3 min) -- short video on quick sort!
