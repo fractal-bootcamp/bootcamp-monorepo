@@ -44,8 +44,10 @@ Bonus:
   - Frontend - bun create vite  
   - Backend - elysia setup, game server setup
 
-## Installation Instructions
+## Deployment
+- (Sevalla)[https://sevalla.com/]
 
+## Installation Instructions
 
 
 ## Inspiration

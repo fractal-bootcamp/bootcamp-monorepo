@@ -1,7 +1,6 @@
 # Styling
 
 **TODO:**
-
 - **Swap styling to be tailwindCSS**  
 - **Make sure all styles are responsive -- responsiveness is very important!!**
 
