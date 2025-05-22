@@ -48,7 +48,7 @@ The application must feel "honest" and immediate:
 |**Correctness**|All must-have behaviours observable?  
 |**Simplicity**|Is the solution as simple as possible? Simple, clean code. A simple system design. Minimal scope to meet the requirements. Minimal complexity.|
 |**Code Cleanliness**|Consistent style, descriptive names, small components, no dead code, good comments to explain confusing elements. Good library choices.|
-|**UX Quality**|Smooth infinite scroll, auto-scroll on new message, focus handling, mobile?|
+|**UX Quality**|Exceptional user experience, looks good, feels good, is delightful to use.|
 |**Time/Scope Management**|Delivered a working slice first, documented stretch goals?|
 
 *A perfect score does **not** require every stretch goal; clarity and execution trump bells & whistles.*
