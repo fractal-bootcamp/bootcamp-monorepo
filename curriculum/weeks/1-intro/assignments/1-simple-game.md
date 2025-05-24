@@ -6,7 +6,7 @@ Pick a Tic Tac Toe -style game and build it from scratch in React, including an 
 
 ## Core Concepts
 
-- Algorithms  
+- Algorithms
 - Data Structures  
 - React
 
