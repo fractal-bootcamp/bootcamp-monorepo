@@ -8,7 +8,7 @@
     - In the lounge
     - Context, high level motivation, welcome
     - create and practice this slide deck
-- 9:30am: Culture lecture by Paris
+- 9:30am: Culture lecture by Paris [../../../slideshows/lectures/culture/slides.md](Paris' Culture Slideshow)
 - 10:00: Expectations lecture by Eugene
 - 10:30: First-day lecture by Andrew
 - 11:00 start work
