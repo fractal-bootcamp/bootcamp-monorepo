@@ -3,15 +3,19 @@
 ## Overview
 
 Our goal is to make our Tic-Tac-Toe multiplayer. Right now, the entire game runs
-in each player's browser, making this impossible. We need to introduce a server,
+in each player's browser (aka. "on the client"), making this impossible. We need to introduce a server,
 and a database.
 
 By the end of this assignment, our tic-tac-toe app will be functionally identical,
-but the game will be running entirely in the server, backed by a database. This
-will allow us to make it multiplayer in the next assignment.
+but the game state will be managed entirely on a centralized server that we control, backed by a database.
+
+Each player will communicate with that server when they want to make a move that changes the game, so that the server can communicate
+those updates to the other player.
+
+This will allow us to make our game multiplayer in the next assignment.
 
 ## Prework
-
+- (~20 min) [Promises & Asynchronous Programming](https://eloquentjavascript.net/11_async.html)
 - (~10 min) [What is a database?](https://www.whalesync.com/blog/an-intro-to-databases)
     - You can ignore the stuff about Whalesync, but we are going to use Supabase!
 - (~1 hour) Learn basic SQL by completing [Chapter 1 and 2 here.](https://www.executeprogram.com/courses/sql).
