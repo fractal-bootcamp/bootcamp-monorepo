@@ -2,70 +2,43 @@
 
 ## Overview
 
-Databases are a fundamental part of most applications. Throughout the course, we’ll be using and abusing databases in every project.
+Our goal is to make our Tic-Tac-Toe multiplayer. Right now, the entire game runs
+in each player's browser (aka. "on the client"), making this impossible. We need to introduce a server,
+and a database.
 
-## Core Concepts
+By the end of this assignment, our tic-tac-toe app will be functionally identical,
+but the game state will be managed entirely on a centralized server that we control, backed by a database.
 
-- Data Modelling  
-- Migrations  
-- ORMs
+Each player will communicate with that server when they want to make a move that changes the game, so that the server can communicate
+those updates to the other player.
 
-## Features
+This will allow us to make our game multiplayer in the next assignment.
 
-Set up your database and do the following
+## Prework
+- (~20 min) [Promises & Asynchronous Programming](https://eloquentjavascript.net/11_async.html)
+- (~10 min) [What is a database?](https://www.whalesync.com/blog/an-intro-to-databases)
+    - You can ignore the stuff about Whalesync, but we are going to use Supabase!
+- (~1 hour) Learn basic SQL by completing [Chapter 1 and 2 here.](https://www.executeprogram.com/courses/sql).
 
-- [ ] Model a database with the following entities  
-      - [ ] Book (ID, Title, Author, ISBN)  
-      - [ ] Author (ID, Name, Biography)  
-      - [ ] Genre (ID, Name)  
-      - [ ] Member (ID, Name, Email, Address)  
-- [ ] Relationships between the entities should meet the following requirements  
-      - [ ] Books can have many genres  
-      - [ ] Members can rent many books at a time  
-      - [ ] Authors can author many books  
-- [ ] Run migrations
-- [ ] Write a SQL Query to add a Book  
-- [ ] Write a script that uses the Prisma client to add a Book  
-- [ ] Write a script that uses the Prisma client to borrow a Book
+## Requirements
 
-Bonus:
+Your app:
+- maintains all the functionality it had in the in-browser version (feel free to add more if you have time).
+- communicates with a server running [Express.js](https://expressjs.com/en/starter/hello-world.html) using an API.
+- runs a [PostgreSQL](https://www.postgresql.org/about/) database hosted by [Supabase](https://supabase.com/).
+- uses [Drizzle.js](https://orm.drizzle.team/docs/overview) on the server for communicating with and managing your database.
+- has 3 implementations of a `TicTacToeApi`
+    - an in-memory implementation, for use on the server 
+    - an implementation that makes requests to the server, used by the browser
+    - an implementation that communicates with a database
+- stores and updates all game state associated with each game in the server and database, not the client
+- has tests for `TicTacToeApi` that pass for both the in-memory and database implementations
 
-- [ ] Create a second database using docker compose  
-- [ ] Create a second prisma schema in the same project and apply it to the second database  
-- [ ] Use [DrizzleORM](https://orm.drizzle.team/) instead of Prisma
+# Bonus
 
-## Resources
-
-- Boilerplate: [https://github.com/fractal-bootcamp/database-boilerplate](https://github.com/fractal-bootcamp/database-boilerplate)   
-- Docker: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)  
-- Postgres: [https://www.postgresql.org/about/](https://www.postgresql.org/about/)  
-- Prisma Documentation: [https://www.prisma.io/docs/orm/prisma-client/queries](https://www.prisma.io/docs/orm/prisma-client/queries)
-
-VSCODE Extensions:
-
-- Prisma extension  
-- Docker extension
-
-Install these things globally:
-
-- Docker Desktop  
-- Bun
-
-In your project:
-
-- `npx prisma migrate dev`  
-- ^ but also, read the prisma docs!  
-- You can use bun to run scripts -- `bun run my_db_script.ts`  
-- ^ but also, read the bun docs!
-
-## Inspiration
-
-- [Install Postgres with Docker Compose](https://medium.com/@agusmahari/docker-how-to-install-postgresql-using-docker-compose-d646c793f216)  
-- [Modelling and Migrations with Prisma](https://blog.logrocket.com/effortless-database-schema-migration-prisma/)  
-- [SQL Cheat Sheet](https://images.datacamp.com/image/upload/v1675360372/Marketing/Blog/SQL_Basics_For_Data_Science.pdf)  
-- Install Bun: [https://bun.sh/](https://bun.sh/)  
-- [Running a script in Typescript](https://jakezegil.substack.com/p/typescript-scripts-quickstart)  
-- [https://www.postgresqltutorial.com/](https://www.postgresqltutorial.com/)
-
-Stuff To Learn:
-[Learn SQL](https://www.executeprogram.com/courses/sql).
+Your app:
+- connects to a test database in Supabase when running locally, so you don't pollute your "prod" database (we will deploy to prod later)
+- is prettier and has animations, sound effects, etc.
+- gracefully handles slow internet connections when connections are very slow
+    - use Chrome's [Network Throttling](https://www.debugbear.com/blog/chrome-devtools-network-throttling) to slow down your internet connection and see how the user experience degrades
+    - use [useOptimistic](https://react.dev/reference/react/useOptimistic) so the UI updates even when requests are very slow
