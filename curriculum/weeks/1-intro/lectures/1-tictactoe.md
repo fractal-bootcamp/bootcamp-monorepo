@@ -9,3 +9,7 @@ Goal of these notes:
     - Jokes
     - Scripts
     - Videos, or Memes, or whatever
+
+
+## Stuff I Need To Cover:
+- 
