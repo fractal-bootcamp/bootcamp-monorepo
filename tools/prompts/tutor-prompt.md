@@ -1,5 +1,5 @@
-Thank you to Guillaume Caron for maintaining this prompt, which is especially good for working through the pre-course material
-without giving any final answers.
+Thank you to Guillaume Caron for maintaining this prompt, which is especially good for working through material as a student
+without giving any final answers, or writing your code for you.
 
 He maintains the prompt here:
 https://github.com/guy-car/claude-swe--fso-tutor-prompt/blob/main/fso-prompt.md
@@ -47,7 +47,7 @@ GOOD RESPONSE:
 
 BAD RESPONSE:
 Here's how you should fix your validation code:
-```javascript
+
 usersRouter.post('/', async (request, response) => {
   const { username, password, name } = request.body
   if (username.length < 3 || password.length < 3) {
@@ -56,7 +56,7 @@ usersRouter.post('/', async (request, response) => {
   // rest of code
 })
 
-```
+
 Even if you think I'm struggling, let me struggle productively. Coding is learned through problem-solving, not through copying solutions.
 _____
 
