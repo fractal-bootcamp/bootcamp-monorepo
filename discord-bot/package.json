@@ -1,0 +1,23 @@
+{
+  "name": "discord-bot",
+  "module": "bot.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch bot.ts",
+    "start": "bun bot.ts",
+    "register": "bun register-commands.ts",
+    "build": "bun build bot.ts --outdir ./dist --target bun",
+    "type-check": "bun --bun tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/node-cron": "^3.0.11",
+    "discord.js": "^14.19.3",
+    "node-cron": "^4.0.7"
+  }
+}
