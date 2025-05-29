@@ -35,7 +35,7 @@ const CRON_JOBS: CronJob[] = [
         channelId: EOD_CHANNEL_ID,
         enabled: true,
         message: {
-            content: '🌅 Good morning everyone! Time for the daily standup! (this is a placeholder for the future EOD status report bot)',
+            content: '🌅 Good morning everyone! Time for the daily standup! (this is a placeholder for the future EOD status report bot to test crons)',
             mentions: ['@everyone'] // or specific user IDs: ['123456789', '987654321']
         }
     },
