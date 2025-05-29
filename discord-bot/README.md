@@ -4,6 +4,28 @@ A Discord bot built with TypeScript, Bun, and Discord.js v14. Features slash com
 
 This is the official Fractal Tech discord bot, so we use it for Fractal Tech things.
 
+## Quick Start
+
+1. **Install dependencies**
+   ```bash
+   bun install
+   ```
+
+2. **Configure your env**
+   - add necessary .env files (ask andrew and/or read [SETUP.md](./docs/SETUP.md))
+
+3. **Run the bot in development mode**
+   ```bash
+   bun dev
+   ```
+
+4. **Register slash commands (if you add or change commands)**
+   ```bash
+   bun register
+   ```
+
+> ℹ️ For more detailed setup and configuration, see [docs/SETUP.md](docs/SETUP.md).
+
 ## Features
 
 - Slash commands with registration and handling

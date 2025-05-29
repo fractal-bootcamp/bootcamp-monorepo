@@ -1,6 +1,8 @@
 #!/usr/bin/env bun
 import { registerCommands } from './commands';
 
+
+
 // ===== CONFIGURATION =====
 const CONFIG = {
     TOKEN: process.env.BOT_TOKEN || '',
@@ -10,7 +12,7 @@ const CONFIG = {
 
 // ===== VALIDATION =====
 if (!CONFIG.TOKEN || !CONFIG.CLIENT_ID) {
-    console.error('❌ Missing required environment variables: BOT_TOKEN and CLIENT_ID');
+    console.error('❌ Missing required environment variables: BOT_TOKEN or CLIENT_ID');
     process.exit(1);
 }
 

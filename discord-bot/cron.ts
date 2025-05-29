@@ -96,11 +96,11 @@ async function sendScheduledMessage(job: CronJob, client: Client): Promise<void>
             return;
         }
 
-        let messageContent: string = job.message.content;
+        let messageContent = job.message.content;
 
         // Add mentions if specified
         if (job.message.mentions && job.message.mentions.length > 0) {
-            const mentions: string = job.message.mentions.map((mention: string) => {
+            const mentions = job.message.mentions.map((mention: string) => {
                 if (mention === '@everyone' || mention === '@here') {
                     return mention;
                 } else if (mention.startsWith('<@&')) {
