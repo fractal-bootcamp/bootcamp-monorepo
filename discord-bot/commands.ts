@@ -21,7 +21,7 @@ async function handleHelloCommand(interaction: ChatInputCommandInteraction): Pro
         `• **Username:** ${user.username}`,
         `• **Display Name:** ${user.globalName || user.username}`,
         `• **User ID:** ${user.id}`,
-        `• **Account Created:** <t:${Math.floor(Date.parse(user.id) / 4194304 + 1420070400000) / 1000}:F>`,
+        `• **Account Created:** <t:${Math.floor(Number((BigInt(user.id) >> 22n) + 1420070400000n) / 1000)}:F>`,
         `• **Bot Account:** ${user.bot ? 'Yes' : 'No'}`
     ];
 
