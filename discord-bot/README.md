@@ -4,6 +4,13 @@ A Discord bot built with TypeScript, Bun, and Discord.js v14. Features slash com
 
 This is the official Fractal Tech discord bot, so we use it for Fractal Tech things.
 
+## Todo:
+- [ ] Add daily "reading thread" post to discuss assigned readings for each day
+- [ ] Add daily "end of day status report" reminder post
+- [ ] Implement `getActiveStudents()` function to identify current active students
+- [ ] Implement `hasPostedReport()` function to check if students have completed their daily status reports
+- [ ] Tag students who haven't posted their end of day reports and remind them of the proper format
+
 ## Quick Start
 
 1. **Install dependencies**
