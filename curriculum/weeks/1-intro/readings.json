@@ -1,8 +1,8 @@
 {
     "weekTitle": "Intro Week",
     "weekNumber": 1,
-    "readings": {
-        "Monday": [
+    "monday": {
+        "readings": [
             {
                 "title": "There is no speed limit",
                 "url": "https://sive.rs/kimo"
@@ -12,7 +12,10 @@
                 "url": "https://www.scattered-thoughts.net/writing/speed-matters/"
             }
         ],
-        "Tuesday": [
+        "assignments": []
+    },
+    "tuesday": {
+        "readings": [
             {
                 "title": "95%ile isn't that good",
                 "url": "https://danluu.com/p95-skill/"
@@ -22,7 +25,10 @@
                 "url": "https://www.scattered-thoughts.net/writing/moving-faster/"
             }
         ],
-        "Wednesday": [
+        "assignments": []
+    },
+    "wednesday": {
+        "readings": [
             {
                 "title": "Software Pathfinding",
                 "url": "https://grantslatton.com/software-pathfinding"
@@ -38,7 +44,10 @@
                 "source": "3-databases prework"
             }
         ],
-        "Thursday": [
+        "assignments": []
+    },
+    "thursday": {
+        "readings": [
             {
                 "title": "How I Became A Programmer",
                 "url": "https://mattdeboard.net/2011/11/23/how-i-became-a-programmer/"
@@ -51,12 +60,27 @@
                 "note": "You can ignore the stuff about Whalesync, but we are going to use Supabase!"
             }
         ],
-        "Friday": [
+        "assignments": []
+    },
+    "friday": {
+        "readings": [],
+        "assignments": [
             {
                 "title": "Learn basic SQL - Chapter 1 and 2",
                 "url": "https://www.executeprogram.com/courses/sql",
                 "duration": "~1 hour",
                 "source": "3-databases prework"
+            }
+        ]
+    },
+    "saturday": {
+        "readings": [],
+        "assignments": [
+            {
+                "title": "Javascript Arrays (1-6)",
+                "url": "https://www.executeprogram.com/courses/javascript-array",
+                "duration": "~30 minutes",
+                "source": "practice exercises"
             }
         ]
     }
