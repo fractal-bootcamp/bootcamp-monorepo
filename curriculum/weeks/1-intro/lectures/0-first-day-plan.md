@@ -2,6 +2,7 @@
 
 - 8:30am: students filter in. minor social hour
     - Name Tags\!
+    - Make Coffee in Coffee Maker
     - Hand out orientation packet
 - 9:00 (sharp\!)
     - Andrew Presentation. Welcome to Fractal Bootcamp\!
@@ -15,6 +16,7 @@
     - We move about the room nudging people -- much more hands on than we’d usually be
 - 12:00 social mixer in a google doc
     - Many/Many Google Doc: what are you looking to get out of this? What are you ready to do? What are you scared about with this program?
+    - https://docs.google.com/document/d/1d0fM7hAo8GrkfwbCjXn3Z9gS6rhcVMWYMe_QrV6VWiU/edit?usp=sharing
 - 12:15: deliver food
 - 13:00: back to work
 - 18:00: We all go out for dinner. Social hour vibes, not directly work/school related. Casual drinks afterward for those interested.
