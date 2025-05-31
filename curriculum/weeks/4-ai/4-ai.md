@@ -10,7 +10,7 @@ You will build full-stack AI applications that are production-ready, one of the 
 
 ## Projects
 
-[Personal AI Assistant](../assignments/chatbot.md)
+[Personal AI Assistant](./assignments/1-chatbot.md)
 
 ## Practice
 

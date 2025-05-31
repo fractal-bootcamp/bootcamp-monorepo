@@ -8,8 +8,8 @@ How to productionize our services, set up cron jobs and automations, and do a de
 
 ## Projects
 
-[Cron Jobs](../assignments/cron.md)
-[Integrations - Mailing List Builder](../assignments/integrations.md)
+[Cron Jobs](./assignments/1-cron.md)
+[Integrations - Mailing List Builder](./assignments/2-integrations.md)
 
 ## Practice
 

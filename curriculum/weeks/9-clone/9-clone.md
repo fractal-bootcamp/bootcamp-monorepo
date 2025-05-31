@@ -8,7 +8,7 @@ Pick your favorite product and build a high-quality, functional clone.
 
 ## Projects
 
-[Product Clone](../assignments/capstone-clone.md)
+[Product Clone](./assignments/capstone-clone.md)
 
 ## Practice
 

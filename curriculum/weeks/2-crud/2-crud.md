@@ -15,9 +15,7 @@ Your new skills will be put to the test with rapid development of an online mult
 
 ## Projects
 
-[Authentication](../assignments/auth.md)
-[Simple Game](../assignments/simple-game.md)
-[Multi-Client Game](../assignments/multi-game.md)
+[Authentication](./assignments/1-auth.md)
 
 ## Practice
 
