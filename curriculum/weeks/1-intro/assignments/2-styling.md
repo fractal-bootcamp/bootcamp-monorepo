@@ -46,6 +46,10 @@ Bonus:
 - [**Flexbox Froggy (if you don’t understand flexbox, do this first)**](https://flexboxfroggy.com/)  
 - [**CSS Diner (if you don’t understand selectors, do this first)**](https://flukeout.github.io/)
 
+
+## Example Repo:
+- https://github.com/fractal-bootcamp/styling
+
 ## Inspiration
 
 - [https://main--5d559397bae39100201eedc1.chromatic.com/](https://main--5d559397bae39100201eedc1.chromatic.com/)  
