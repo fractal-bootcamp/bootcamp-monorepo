@@ -1,7 +1,9 @@
 import cron, { type ScheduledTask } from 'node-cron';
 import type { Client, TextChannel } from 'discord.js';
 
-const EOD_CHANNEL_ID = process.env.CHANNEL_ID || '';
+const EOD_CHANNEL_ID = process.env.EOD_CHANNEL_ID;
+
+if (!EOD_CHANNEL_ID) throw ("EOD Channel ID Required")
 
 interface CronMessage {
     content: string;
@@ -58,6 +60,16 @@ const CRON_JOBS: CronJob[] = [
             content: '🕔 End of workday! Don\'t forget to log your hours.',
             mentions: [] // No mentions
         }
+    },
+    {
+        name: 'every_minute_test',
+        schedule: '* * * * *', // Every minute
+        channelId: EOD_CHANNEL_ID,
+        enabled: true, // Enabled by default for testing
+        message: {
+            content: '⏰ This is your every-minute cron test message!',
+            mentions: [] // No mentions
+        }
     }
 ];
 
@@ -88,7 +100,7 @@ export function stopCronJobs(): void {
     activeCronJobs.clear();
 }
 
-async function sendScheduledMessage(job: CronJob, client: Client): Promise<void> {
+export async function sendScheduledMessage(job: CronJob, client: Client): Promise<void> {
     try {
         const channel = await client.channels.fetch(job.channelId);
         if (!channel || !channel.isTextBased()) {

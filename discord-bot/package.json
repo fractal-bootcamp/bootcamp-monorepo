@@ -7,10 +7,15 @@
     "start": "bun bot.ts",
     "register": "bun register-commands.ts",
     "build": "bun build bot.ts --outdir ./dist --target bun",
-    "type-check": "bun --bun tsc --noEmit"
+    "type-check": "bun --bun tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@vitest/ui": "^3.1.4",
+    "vitest": "^3.1.4"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
