@@ -2,6 +2,8 @@ import cron, { type ScheduledTask } from 'node-cron';
 import type { Client, TextChannel } from 'discord.js';
 
 const EOD_CHANNEL_ID = process.env.EOD_CHANNEL_ID;
+const READING_CHANNEL_ID = '1336694823050285169'
+const PRACTICE_CHANNEL_ID = '1378928414181949480'
 
 if (!EOD_CHANNEL_ID) throw ("EOD Channel ID Required")
 
@@ -29,48 +31,89 @@ const TIMEZONE_CONFIG: TimezoneConfig = {
     locale: 'en-US'
 };
 
+// ===== MESSAGE TEMPLATES =====
+const EOD_STATUS_TEMPLATE = `Reminder @su2025, 📝 Please submit your EOD status report
+
+*Template*:
+*Blockers* - what is blocking you from making more progress and having more fun?
+*Wins* - What wins are worth celebrating today? 
+*PRs* - link all your PRS for the day
+*Code Review* - Link your one PR review for the day`;
+
+const DAILY_READINGS_TEMPLATE = `@su2025, this is your daily thread to discuss today's readings.
+
+*post your questions/comments/highlights/notes in this thread by the start of lecture tomorrow*
+
+readings are not optional, and if you do not complete them you may be... 🤖||T3RM1N4T3D!!||🤖
+
+todo: andrew needs to actually wire this up with the readings, but for now you can find today's reading in here:
+https://github.com/fractal-bootcamp/bootcamp-monorepo/tree/main/curriculum/weeks
+`
+
+const DAILY_PRACTICE_TEMPLATE = `@su2025, this is your daily thread to discuss today's practice problems.
+
+*post your questions/comments/highlights/notes/revelations in this thread by the start of lecture tomorrow*
+
+practice problems are not optional unless you complete them all in advance!
+
+any suborbination may be punished with... 🤖||T3RM1N4T10N!!||🤖
+
+todo: andrew needs to actually wire this up with the practice problems, but for now you can find today's practice problems in here:
+https://github.com/fractal-bootcamp/bootcamp-monorepo/tree/main/curriculum/weeks
+`
+
 // ===== CRON JOB DEFINITIONS =====
 const CRON_JOBS: CronJob[] = [
-    {
-        name: 'daily_reminder',
-        schedule: '0 9 * * *', // Every day at 9:00 AM
-        channelId: EOD_CHANNEL_ID,
-        enabled: true,
-        message: {
-            content: '🌅 Good morning everyone! Time for the daily standup! (this is a placeholder for the future EOD status report bot to test crons)',
-            mentions: ['@everyone'] // or specific user IDs: ['123456789', '987654321']
-        }
-    },
     {
         name: 'weekly_meeting',
         schedule: '0 14 * * 1', // Every Monday at 2:00 PM
         channelId: EOD_CHANNEL_ID,
-        enabled: true,
+        enabled: false,
         message: {
             content: '📅 Weekly team meeting starts in 15 minutes!',
             mentions: ['@here'] // or role IDs: ['<@&ROLE_ID>']
         }
     },
     {
-        name: 'end_of_day',
-        schedule: '0 17 * * 1-5', // Weekdays at 5:00 PM
-        channelId: EOD_CHANNEL_ID,
-        enabled: false, // Disabled by default
-        message: {
-            content: '🕔 End of workday! Don\'t forget to log your hours.',
-            mentions: [] // No mentions
-        }
-    },
-    {
         name: 'every_minute_test',
         schedule: '* * * * *', // Every minute
         channelId: EOD_CHANNEL_ID,
-        enabled: true, // Enabled by default for testing
+        enabled: false, // Disabled - was for testing only
         message: {
             content: '⏰ This is your every-minute cron test message!',
             mentions: [] // No mentions
         }
-    }
+    },
+    {
+        name: 'eod_status_reminder',
+        schedule: '0 18 * * 1-6', // Monday through Saturday at 4:00 PM
+        channelId: EOD_CHANNEL_ID,
+        enabled: true,
+        message: {
+            content: EOD_STATUS_TEMPLATE,
+            mentions: ['@su2025']
+        }
+    },
+    {
+        name: 'daily_reading',
+        schedule: '0 10 * * 1-6', // Monday through Saturday at 10:00 AM
+        channelId: READING_CHANNEL_ID, // READING_CHANNEL
+        enabled: true,
+        message: {
+            content: DAILY_READINGS_TEMPLATE,
+            mentions: ['@su2025']
+        }
+    },
+    {
+        name: 'daily_practice',
+        schedule: '0 10 * * 1-6', // Monday through Saturday at 10:00 AM
+        channelId: PRACTICE_CHANNEL_ID, // PRACTICE CHANNEL ID
+        enabled: true,
+        message: {
+            content: DAILY_PRACTICE_TEMPLATE,
+            mentions: ['@su2025']
+        }
+    },
 ];
 
 const activeCronJobs = new Map<string, ScheduledTask>();
@@ -85,7 +128,7 @@ export function startCronJobs(client: Client): void {
             });
 
             activeCronJobs.set(job.name, cronTask);
-            console.log(`✅ Started cron job: ${job.name} (${job.schedule})`);
+            console.log(`✅ Started cron job: ${job.name}(${job.schedule})`);
         } else {
             console.log(`⏸️  Skipped disabled job: ${job.name}`);
         }
@@ -104,7 +147,7 @@ export async function sendScheduledMessage(job: CronJob, client: Client): Promis
     try {
         const channel = await client.channels.fetch(job.channelId);
         if (!channel || !channel.isTextBased()) {
-            console.error(`❌ Channel not found or not text-based: ${job.channelId} for job: ${job.name}`);
+            console.error(`❌ Channel not found or not text - based: ${job.channelId} for job: ${job.name} `);
             return;
         }
 
@@ -118,16 +161,16 @@ export async function sendScheduledMessage(job: CronJob, client: Client): Promis
                 } else if (mention.startsWith('<@&')) {
                     return mention; // Role mention
                 } else {
-                    return `<@${mention}>`; // User ID mention
+                    return `< @${mention}> `; // User ID mention
                 }
             }).join(' ');
 
-            messageContent = `${mentions}\n\n${messageContent}`;
+            messageContent = `${mentions} \n\n${messageContent} `;
         }
 
         await (channel as TextChannel).send(messageContent);
-        console.log(`📨 Sent scheduled message for job: ${job.name}`);
+        console.log(`📨 Sent scheduled message for job: ${job.name} `);
     } catch (error) {
-        console.error(`❌ Error sending scheduled message for ${job.name}:`, error);
+        console.error(`❌ Error sending scheduled message for ${job.name}: `, error);
     }
 }
