@@ -6,8 +6,8 @@
 // endCondition(gameState) -> endResult | undefined
 
 export type CellCoordinate = {
-    row: 0 | 1 | 2,
-    col: 0 | 1 | 2
+    row: number,
+    col: number
 }
 export type Player = 'x' | 'o'
 export type Cell = Player | null
@@ -31,6 +31,11 @@ export const initialGameState = (): Game => {
     return game
 }
 
+function nextPlayer(currentPlayer: Player) {
+    if (currentPlayer === 'x') return 'o'
+    else return 'x'
+}
+
 export function move(game: Game, selectedCellCoords: CellCoordinate): Game {
     const nextGame = structuredClone(game)
     let selectedCell = nextGame.board[selectedCellCoords.row][selectedCellCoords.col]
@@ -40,7 +45,7 @@ export function move(game: Game, selectedCellCoords: CellCoordinate): Game {
     // add the currentPlayer to the selectedCell = nextGame.currentPlayer
 
     // calculate the endCondition
-    return { ...nextGame, endState: calculateEnd(nextGame) }
+    return { ...nextGame, currentPlayer: nextPlayer(nextGame.currentPlayer), endState: calculateEnd(nextGame) }
 }
 
 function calculateEnd(game: Game): EndState {

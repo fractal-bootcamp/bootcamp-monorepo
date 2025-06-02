@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import { initialGameState } from './game/game'
+import { initialGameState, move } from './game/game'
 
 function App() {
   const [game, setGame] = useState(initialGameState())
+
+
 
   return (
     <div className="app">
@@ -27,6 +29,9 @@ function App() {
               <div
                 key={`${rowIndex}-${colIndex}`}
                 className={`cell ${cell ? `cell-${cell}` : ''}`}
+                onClick={() => {
+                  setGame(prev => move(prev, { row: rowIndex, col: colIndex }))
+                }}
               >
                 {cell ? cell.toUpperCase() : ''}
               </div>
