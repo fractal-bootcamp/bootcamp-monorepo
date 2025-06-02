@@ -4,6 +4,7 @@ import type { Client, TextChannel } from 'discord.js';
 const EOD_CHANNEL_ID = '1336123201968935006'
 const READING_CHANNEL_ID = '1336694823050285169'
 const PRACTICE_CHANNEL_ID = '1378928414181949480'
+const BOT_TEST_ID = '1377482428062629978'
 
 interface CronMessage {
     content: string;
@@ -79,6 +80,16 @@ const CRON_JOBS: CronJob[] = [
         enabled: false, // Disabled - was for testing only
         message: {
             content: '⏰ This is your every-minute cron test message!',
+            mentions: [] // No mentions
+        }
+    },
+    {
+        name: 'midnight_test',
+        schedule: '0 0 * * *', // Every day at midnight
+        channelId: BOT_TEST_ID, // Make sure this constant is defined elsewhere
+        enabled: true, // Enabled for nightly testing
+        message: {
+            content: '🌙 This is your midnight cron test message, the crons should work tomorrow!',
             mentions: [] // No mentions
         }
     },
