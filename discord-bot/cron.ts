@@ -1,11 +1,9 @@
 import cron, { type ScheduledTask } from 'node-cron';
 import type { Client, TextChannel } from 'discord.js';
 
-const EOD_CHANNEL_ID = process.env.EOD_CHANNEL_ID;
+const EOD_CHANNEL_ID = '1336123201968935006'
 const READING_CHANNEL_ID = '1336694823050285169'
 const PRACTICE_CHANNEL_ID = '1378928414181949480'
-
-if (!EOD_CHANNEL_ID) throw ("EOD Channel ID Required")
 
 interface CronMessage {
     content: string;
