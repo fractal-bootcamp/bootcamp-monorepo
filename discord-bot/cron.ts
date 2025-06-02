@@ -77,7 +77,7 @@ const CRON_JOBS: CronJob[] = [
         name: 'every_minute_test',
         schedule: '* * * * *', // Every minute
         channelId: EOD_CHANNEL_ID,
-        enabled: false, // Disabled - was for testing only
+        enabled: true, // Disabled - was for testing only
         message: {
             content: '⏰ This is your every-minute cron test message!',
             mentions: [] // No mentions
