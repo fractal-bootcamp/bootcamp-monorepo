@@ -6,9 +6,7 @@
 
 ## Overview
 
-- Tailwind  
-- [DaisyUI](https://daisyui.com/)  
-- SCSS
+- TailwindCSS
 
 ## Preparation
 
@@ -41,7 +39,6 @@ Bonus:
 
 ## Resources
 
-- Boilerplate: npx create-vite --template typescript  
 - Deployment: [Vercel](https://vercel.com/)  
 - Learn CSS Layout: https://learnlayout.com/margin-auto
 - Learn Web Design in 4 Minutes: https://jgthms.com/web-design-in-4-minutes
@@ -49,6 +46,9 @@ Bonus:
 - [**Flexbox Froggy (if you don’t understand flexbox, do this first)**](https://flexboxfroggy.com/)  
 - [**CSS Diner (if you don’t understand selectors, do this first)**](https://flukeout.github.io/)
 
+
+## Helpers:
+- Boilerplate: bun create vite
 
 ## Example Repo:
 - https://github.com/fractal-bootcamp/styling
