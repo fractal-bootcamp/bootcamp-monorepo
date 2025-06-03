@@ -40,7 +40,7 @@ Bonus:
 ## Resources
 
 - Deployment: [Vercel](https://vercel.com/)  
-- Learn CSS Layout: https://learnlayout.com/margin-auto
+- Learn CSS Layout: https://learnlayout.com/
 - Learn Web Design in 4 Minutes: https://jgthms.com/web-design-in-4-minutes
 - Game to teach you design sense: https://cantunsee.space/
 - [**Flexbox Froggy (if you don’t understand flexbox, do this first)**](https://flexboxfroggy.com/)  
