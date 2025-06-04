@@ -12,6 +12,7 @@ Lecture 1 -- Servers:
 - replace `bun dev` script with `bun run --watch server.ts`, check working
 - create tic tac toe api: `api.ts`
 - create first impl using a map: `in-memory-api.ts`
+- go over [this server/client diagram](https://excalidraw.com/#json=HbRS2oYJyu9l1gLJcaMQP,w0hwrbKk2HyEUzjvWQC5hw)
 - add tests for `in-memory-api.ts`
 - add express endpoints (create, update, read)
 - create `api-client.ts`
