@@ -41,15 +41,16 @@
                 "duration": "~10 min",
                 "source": "3-databases prework",
                 "note": "You can ignore the stuff about Whalesync, but we are going to use Supabase!"
-            },
+            }
+        ],
+        "assignments": [
             {
                 "title": "Learn basic SQL",
                 "url": "https://www.executeprogram.com/courses/sql",
                 "duration": "~1 hour",
                 "source": "3-databases prework"
             }
-        ],
-        "assignments": []
+        ]
     },
     "thursday": {
         "readings": [

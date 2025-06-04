@@ -95,7 +95,7 @@ const CRON_JOBS: CronJob[] = [
     },
     {
         name: 'eod_status_reminder',
-        schedule: '0 18 * * 1-6', // Monday through Saturday at 4:00 PM
+        schedule: '0 18 * * 1-6', // Monday through Saturday at 6:00 PM
         channelId: EOD_CHANNEL_ID,
         enabled: true,
         message: {
@@ -105,7 +105,7 @@ const CRON_JOBS: CronJob[] = [
     },
     {
         name: 'daily_reading',
-        schedule: '0 10 * * 1-6', // Monday through Saturday at 10:00 AM
+        schedule: '0 8 * * 1-6', // Monday through Saturday at 10:00 AM
         channelId: READING_CHANNEL_ID, // READING_CHANNEL
         enabled: true,
         message: {
@@ -115,7 +115,7 @@ const CRON_JOBS: CronJob[] = [
     },
     {
         name: 'daily_practice',
-        schedule: '0 10 * * 1-6', // Monday through Saturday at 10:00 AM
+        schedule: '0 8 * * 1-6', // Monday through Saturday at 10:00 AM
         channelId: PRACTICE_CHANNEL_ID, // PRACTICE CHANNEL ID
         enabled: true,
         message: {
