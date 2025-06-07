@@ -110,7 +110,7 @@ const CRON_JOBS: CronJobConfig[] = [
     },
     {
         name: 'every_15_sec_test',
-        schedule: '/15 * * * * *', // Every 1 seconds (added seconds field)
+        schedule: '*/15 * * * * *', // Every 1 seconds (added seconds field)
         channelId: BOT_TEST_ID,
         enabled: true, // Disabled - was for testing only
         message: {
