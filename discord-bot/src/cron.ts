@@ -7,7 +7,7 @@ const PRACTICE_CHANNEL_ID = '1378928414181949480'
 const BOT_TEST_ID = '1377482428062629978'
 
 // Threshold for Sevalla hosting - increased to handle potential delays
-const SEVALLA_THRESHOLD_MS = 5000; // 5 seconds threshold for slow hosting
+const SEVALLA_THRESHOLD_MS = 30000; // 30 second threshold for slow hosting
 
 interface CronMessage {
     content: string;
