@@ -1,5 +1,0 @@
-- Paris
-
-
-- Deployment
-- Code Review
