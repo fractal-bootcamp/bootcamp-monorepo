@@ -10,7 +10,9 @@
     "type-check": "bun --bun tsc --noEmit",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "docker:build": "docker build -t fractal-bootcamp-bot .",
+    "docker:run": "docker run fractal-bootcamp-bot"
   },
   "devDependencies": {
     "@types/bun": "latest",
