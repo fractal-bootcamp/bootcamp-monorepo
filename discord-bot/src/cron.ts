@@ -1,4 +1,4 @@
-import cron, { type ScheduledTask } from 'node-cron';
+import { CronJob } from 'cron';
 import type { Client, TextChannel } from 'discord.js';
 
 const EOD_CHANNEL_ID = '1336123201968935006'
@@ -6,12 +6,15 @@ const READING_CHANNEL_ID = '1336694823050285169'
 const PRACTICE_CHANNEL_ID = '1378928414181949480'
 const BOT_TEST_ID = '1377482428062629978'
 
+// Threshold for Sevalla hosting - increased to handle potential delays
+const SEVALLA_THRESHOLD_MS = 5000; // 5 seconds threshold for slow hosting
+
 interface CronMessage {
     content: string;
     mentions: string[];
 }
 
-interface CronJob {
+interface CronJobConfig {
     name: string;
     schedule: string;
     channelId: string;
@@ -62,10 +65,42 @@ https://github.com/fractal-bootcamp/bootcamp-monorepo/tree/main/curriculum/weeks
 `
 
 // ===== CRON JOB DEFINITIONS =====
-const CRON_JOBS: CronJob[] = [
+/**
+ * CRON SYNTAX EXPLAINED
+ * 
+ * Cron expressions are strings used to define scheduled times for jobs. 
+ * The format is:
+ * 
+ *   ┌───────────── second (0 - 59)
+ *   │ ┌───────────── minute (0 - 59)
+ *   │ │ ┌───────────── hour (0 - 23)
+ *   │ │ │ ┌───────────── day of month (1 - 31)
+ *   │ │ │ │ ┌───────────── month (1 - 12)
+ *   │ │ │ │ │ ┌───────────── day of week (0 - 7) (0 or 7 = Sunday)
+ *   │ │ │ │ │ │
+ *   * * * * * *
+ * 
+ * Each field can be:
+ *   - A specific value (e.g., 5)
+ *   - A range (e.g., 1-5)
+ *   - A list (e.g., 1,3,5)
+ *   - A step (e.g., *\/15 for every 15 units)
+ *   - An asterisk (*) for "every" value
+ * 
+ * Examples:
+ *   "0 0 18 * * 1-6"   → 6:00 PM, Monday through Saturday
+ *   "0 0 8 * * 1-6"    → 8:00 AM, Monday through Saturday
+ *   "15 * * * * *"     → Every minute at 15 seconds
+ *   "0 0 0 * * *"      → Midnight every day
+ * 
+ * Note: This project uses 6 fields (including seconds) for finer control.
+
+  */
+
+const CRON_JOBS: CronJobConfig[] = [
     {
         name: 'weekly_meeting',
-        schedule: '0 14 * * 1', // Every Monday at 2:00 PM
+        schedule: '0 0 14 * * 1', // Every Monday at 2:00 PM (added seconds field)
         channelId: EOD_CHANNEL_ID,
         enabled: false,
         message: {
@@ -74,8 +109,8 @@ const CRON_JOBS: CronJob[] = [
         }
     },
     {
-        name: 'every_minute_test',
-        schedule: '* * * * *', // Every minute
+        name: 'every_15_sec_test',
+        schedule: '/15 * * * * *', // Every 1 seconds (added seconds field)
         channelId: EOD_CHANNEL_ID,
         enabled: false, // Disabled - was for testing only
         message: {
@@ -85,7 +120,7 @@ const CRON_JOBS: CronJob[] = [
     },
     {
         name: 'midnight_test',
-        schedule: '0 0 * * *', // Every day at midnight
+        schedule: '0 0 0 * * *', // Every day at midnight (added seconds field)
         channelId: BOT_TEST_ID, // Make sure this constant is defined elsewhere
         enabled: true, // Enabled for nightly testing
         message: {
@@ -95,7 +130,7 @@ const CRON_JOBS: CronJob[] = [
     },
     {
         name: 'eod_status_reminder',
-        schedule: '0 18 * * 1-6', // Monday through Saturday at 6:00 PM
+        schedule: '0 0 18 * * 1-6', // Monday through Saturday at 6:00 PM (added seconds field)
         channelId: EOD_CHANNEL_ID,
         enabled: true,
         message: {
@@ -105,7 +140,7 @@ const CRON_JOBS: CronJob[] = [
     },
     {
         name: 'daily_reading',
-        schedule: '0 8 * * 1-6', // Monday through Saturday at 10:00 AM
+        schedule: '0 0 8 * * 1-6', // Monday through Saturday at 8:00 AM (added seconds field)
         channelId: READING_CHANNEL_ID, // READING_CHANNEL
         enabled: true,
         message: {
@@ -115,7 +150,7 @@ const CRON_JOBS: CronJob[] = [
     },
     {
         name: 'daily_practice',
-        schedule: '0 8 * * 1-6', // Monday through Saturday at 10:00 AM
+        schedule: '0 0 8 * * 1-6', // Monday through Saturday at 8:00 AM (added seconds field)
         channelId: PRACTICE_CHANNEL_ID, // PRACTICE CHANNEL ID
         enabled: true,
         message: {
@@ -125,34 +160,42 @@ const CRON_JOBS: CronJob[] = [
     },
 ];
 
-const activeCronJobs = new Map<string, ScheduledTask>();
+const activeCronJobs = new Map<string, CronJob>();
 
 export function startCronJobs(client: Client): void {
-    CRON_JOBS.forEach((job: CronJob) => {
-        if (job.enabled) {
-            const cronTask: ScheduledTask = cron.schedule(job.schedule, async (): Promise<void> => {
-                await sendScheduledMessage(job, client);
-            }, {
-                timezone: TIMEZONE_CONFIG.timezone
+    CRON_JOBS.forEach((jobConfig: CronJobConfig) => {
+        if (jobConfig.enabled) {
+            const cronJob = CronJob.from({
+                cronTime: jobConfig.schedule,
+                onTick: async function () {
+                    await sendScheduledMessage(jobConfig, client);
+                },
+                start: true,
+                timeZone: TIMEZONE_CONFIG.timezone,
+                name: jobConfig.name,
+                threshold: SEVALLA_THRESHOLD_MS, // Long threshold for Sevalla hosting
+                errorHandler: (error: unknown) => {
+                    console.error(`❌ Error in cron job ${jobConfig.name}:`, error);
+                }
             });
 
-            activeCronJobs.set(job.name, cronTask);
-            console.log(`✅ Started cron job: ${job.name}(${job.schedule})`);
+            activeCronJobs.set(jobConfig.name, cronJob);
+            console.log(`✅ Started cron job: ${jobConfig.name} (${jobConfig.schedule}) with ${SEVALLA_THRESHOLD_MS}ms threshold`);
         } else {
-            console.log(`⏸️  Skipped disabled job: ${job.name}`);
+            console.log(`⏸️  Skipped disabled job: ${jobConfig.name}`);
         }
     });
 }
 
 export function stopCronJobs(): void {
-    activeCronJobs.forEach((task: ScheduledTask, name: string) => {
-        task.stop();
+    activeCronJobs.forEach((cronJob: CronJob, name: string) => {
+        cronJob.stop();
         console.log(`🛑 Stopped cron job: ${name}`);
     });
     activeCronJobs.clear();
 }
 
-export async function sendScheduledMessage(job: CronJob, client: Client): Promise<void> {
+export async function sendScheduledMessage(job: CronJobConfig, client: Client): Promise<void> {
     try {
         const channel = await client.channels.fetch(job.channelId);
         if (!channel || !channel.isTextBased()) {
