@@ -111,10 +111,10 @@ const CRON_JOBS: CronJobConfig[] = [
     {
         name: 'every_15_sec_test',
         schedule: '/15 * * * * *', // Every 1 seconds (added seconds field)
-        channelId: EOD_CHANNEL_ID,
+        channelId: BOT_TEST_ID,
         enabled: true, // Disabled - was for testing only
         message: {
-            content: '⏰ This is your every-minute cron test message!',
+            content: '⏰ This is your every-15 second cron test message!',
             mentions: [] // No mentions
         }
     },
