@@ -12,8 +12,9 @@ That's what we're going to do now.
 
 As a prerequisite to this, you should probably know the basics of [chat persistence](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-message-persistence), which are covered in Vercel's AI SDK documentation.
 
+So, as long as you're prepared, let's get started:
 
-1. How does Vercel persist their messages?
+# How does Vercel persist their messages?
 
 There are actually three parts to this question:
 
