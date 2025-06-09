@@ -51,3 +51,5 @@ There are two places where we are saving the messages that the user sends us.
 
 
 ## 3. How does Vercel retrieve the messages and send them back to the client when requested?
+
+TBD

@@ -1,5 +1,6 @@
 import { CronJob } from 'cron';
 import type { Client, TextChannel } from 'discord.js';
+import { processRoleMentions } from './roles';
 
 const EOD_CHANNEL_ID = '1336123201968935006'
 const READING_CHANNEL_ID = '1336694823050285169'
@@ -64,6 +65,8 @@ todo: andrew needs to actually wire this up with the practice problems, but for 
 https://github.com/fractal-bootcamp/bootcamp-monorepo/tree/main/curriculum/weeks
 `
 
+const DAILY_EOD_REVIEW_TEMPLATE = ``
+
 // ===== CRON JOB DEFINITIONS =====
 /**
  * CRON SYNTAX EXPLAINED
@@ -110,19 +113,19 @@ const CRON_JOBS: CronJobConfig[] = [
     },
     {
         name: 'every_15_sec_test',
-        schedule: '*/15 * * * * *', // Every 1 seconds (added seconds field)
+        schedule: '*/15 * * * * *', // Every 15 seconds (added seconds field)
         channelId: BOT_TEST_ID,
-        enabled: false, // Disabled - was for testing only
+        enabled: true,
         message: {
             content: '⏰ This is your every-15 second cron test message!',
-            mentions: [] // No mentions
+            mentions: ['instructor'] // Uses predefined role name
         }
     },
     {
         name: 'midnight_test',
         schedule: '0 0 0 * * *', // Every day at midnight (added seconds field)
-        channelId: BOT_TEST_ID, // Make sure this constant is defined elsewhere
-        enabled: true, // Enabled for nightly testing
+        channelId: BOT_TEST_ID,
+        enabled: true,
         message: {
             content: '🌙 This is your midnight cron test message, the crons should work tomorrow!',
             mentions: [] // No mentions
@@ -135,27 +138,27 @@ const CRON_JOBS: CronJobConfig[] = [
         enabled: true,
         message: {
             content: EOD_STATUS_TEMPLATE,
-            mentions: ['@su2025']
+            mentions: ['su2025'] // Uses predefined role name
         }
     },
     {
         name: 'daily_reading',
         schedule: '0 0 8 * * 1-6', // Monday through Saturday at 8:00 AM (added seconds field)
-        channelId: READING_CHANNEL_ID, // READING_CHANNEL
+        channelId: READING_CHANNEL_ID,
         enabled: true,
         message: {
             content: DAILY_READINGS_TEMPLATE,
-            mentions: ['@su2025']
+            mentions: ['su2025'] // Uses predefined role name
         }
     },
     {
         name: 'daily_practice',
         schedule: '0 0 8 * * 1-6', // Monday through Saturday at 8:00 AM (added seconds field)
-        channelId: PRACTICE_CHANNEL_ID, // PRACTICE CHANNEL ID
+        channelId: PRACTICE_CHANNEL_ID,
         enabled: true,
         message: {
             content: DAILY_PRACTICE_TEMPLATE,
-            mentions: ['@su2025']
+            mentions: ['su2025'] // Uses predefined role name
         }
     },
 ];
@@ -207,17 +210,11 @@ export async function sendScheduledMessage(job: CronJobConfig, client: Client): 
 
         // Add mentions if specified
         if (job.message.mentions && job.message.mentions.length > 0) {
-            const mentions = job.message.mentions.map((mention: string) => {
-                if (mention === '@everyone' || mention === '@here') {
-                    return mention;
-                } else if (mention.startsWith('<@&')) {
-                    return mention; // Role mention
-                } else {
-                    return `< @${mention}> `; // User ID mention
-                }
-            }).join(' ');
+            const guild = (channel as TextChannel).guild;
 
-            messageContent = `${mentions} \n\n${messageContent} `;
+            const mentions = await processRoleMentions(guild, job.message.mentions);
+            const mentionString = mentions.join(' ');
+            messageContent = `${mentionString}\n\n${messageContent}`;
         }
 
         await (channel as TextChannel).send(messageContent);
