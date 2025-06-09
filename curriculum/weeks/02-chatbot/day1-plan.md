@@ -5,16 +5,9 @@
 ```bash
 npx create-t3-app@latest my-chatbot
 ```
-- Select: TypeScript, Next.js, Tailwind, tRPC, Drizzle
+- Select: TypeScript, Next.js, Tailwind, tRPC, Drizzle, SQLite
 
-2. Local setup:
-```bash
-cd my-chatbot
-npm install
-npm run dev
-```
-
-3. Vercel deployment:
+2. Vercel deployment:
 - Push to GitHub
 - Import to Vercel
 - Deploy
@@ -24,11 +17,20 @@ npm run dev
 1. Install dependencies:
 ```bash
 npm install ai
-npx shadcn-ui@latest init
-npx shadcn-ui@latest add button card input
+npx shadcn@latest init
+npx shadcn@latest add button card input
 ```
 
-2. Create `app/components/Chat.tsx`:
+
+2. Setup database:
+
+See [drizzle docs](https://orm.drizzle.team/docs/overview)
+
+```bash
+bun run db:push
+```
+
+3. Create `app/components/Chat.tsx`:
 ```tsx
 'use client'
 import { useChat } from 'ai/react'
@@ -59,14 +61,6 @@ export function Chat() {
     </div>
   )
 }
-```
-
-3. Setup database:
-
-See [drizzle docs](https://orm.drizzle.team/docs/overview)
-
-```bash
-bun run db:push
 ```
 
 4. Follow the rest of the [AI SDK](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot) tutorial documentation
