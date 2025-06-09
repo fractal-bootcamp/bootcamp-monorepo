@@ -1,6 +1,6 @@
 # Chatbot Help
 
-<img src="help.png" alt="Help" width="400">
+<img src="help.png" alt="Help" width="600">
 
 Harrison and Dante Ask:
 "How do we persist complex AI messages to our postgres database using the AI SDK?"
@@ -39,6 +39,8 @@ By looking at [queries.ts](https://github.com/vercel/ai-chatbot/blob/7d8e71383f5
 I'm interested in the [saveMessages query](https://github.com/vercel/ai-chatbot/blob/7d8e71383f55c766ca575da2cac0a8d89283c031/lib/db/queries.ts#L211-L221).
 
 By clicking on the name of the function you can also get all of its references:
+
+
 <img src="references.png" alt="References" width="400">
 
 This takes us to `app/(chat)/api/chat/route.ts` in the file-based app router. Which corresponds to definitions for the `http://localhost:3000/api/chat` route handlers.  Remember that the `(chat)` is just a route group, and doesn't affect the actual route where the functions are hosted.
