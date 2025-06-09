@@ -96,7 +96,7 @@ Complete these 6 sections on day 2:
 8. Reading Images & PDFs: https://ai-sdk.dev/docs/guides/multi-modal-chatbot
 9. Natural Language SQL Queries: https://ai-sdk.dev/docs/guides/natural-language-postgres
 
-On day 3, we will focus on improving our app with authentication and some more production features.
+On day 3, we will focus on improving our app with authentication and some more production features for users.
 
 
 ### Some interesting tools to help:
