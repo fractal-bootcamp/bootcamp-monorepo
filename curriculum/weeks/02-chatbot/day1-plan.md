@@ -5,7 +5,7 @@
 ```bash
 npx create-t3-app@latest my-chatbot
 ```
-- Select: TypeScript, Next.js, Tailwind, tRPC, Drizzle, SQLite
+- Select: TypeScript, Next.js, Tailwind, tRPC, Drizzle, Postgres (setup supabase)
 
 2. Vercel deployment:
 - Push to GitHub
