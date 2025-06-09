@@ -5,7 +5,7 @@
 ```bash
 npx create-t3-app@latest my-chatbot
 ```
-- Select: TypeScript, Next.js, Tailwind, tRPC, Drizzle, Postgres (setup supabase)
+- Select: TypeScript, Next.js, Tailwind, tRPC, Drizzle, Postgres (setup supabase), No Auth
 
 2. Vercel deployment:
 - Push to GitHub
@@ -30,40 +30,7 @@ See [drizzle docs](https://orm.drizzle.team/docs/overview)
 bun run db:push
 ```
 
-3. Create `app/components/Chat.tsx`:
-```tsx
-'use client'
-import { useChat } from 'ai/react'
- 
-export function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat()
- 
-  return (
-    <div className="flex flex-col w-full max-w-md mx-auto">
-      <div className="flex-1 overflow-y-auto">
-        {messages.map(m => (
-          <div key={m.id} className="mb-4">
-            <strong>{m.role}: </strong>
-            {m.content}
-          </div>
-        ))}
-      </div>
- 
-      <form onSubmit={handleSubmit} className="flex gap-2">
-        <input
-          value={input}
-          onChange={handleInputChange}
-          placeholder="Say something..."
-          className="flex-1 p-2 border rounded"
-        />
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  )
-}
-```
-
-4. Follow the rest of the [AI SDK](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot) tutorial documentation
+3. Follow the rest of the [AI SDK](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot) tutorial documentation
 
 ### We have these features to build in our app in the next 2-3 days:
 1. [Chatbot Tutorial](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot)
