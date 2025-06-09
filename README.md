@@ -31,17 +31,13 @@ Welcome to the fractal bootcamp monorepo. Start with our [orientation packet](cu
 
 The curriculum is organized into weekly modules:
 
-- [Week 1: Introduction](curriculum/weeks/1-intro/)
-- [Week 2: CRUD Applications](curriculum/weeks/2-crud/)
-- [Week 3: Algorithms](curriculum/weeks/3-algo/)
-- [Week 4: AI Integration](curriculum/weeks/4-ai/)
-- [Week 5: React Native](curriculum/weeks/5-native/)
-- [Week 6: Production Deployment](curriculum/weeks/6-prod/)
-- [Week 7: AI Applications](curriculum/weeks/7-ai/)
-- [Week 8: Backend Systems](curriculum/weeks/8-backend/)
-- [Week 9: Clone Projects](curriculum/weeks/9-clone/)
-- [Week 10: Internal Tools](curriculum/weeks/10-internal/)
-- [Week 11: SaaS Development](curriculum/weeks/11-saas/)
+For instance, here are the first six weeks of curriculum:
+- [Week 1: Introduction](curriculum/weeks/01-intro/)
+- [Week 2: Chatbot](curriculum/weeks/02-chatbot/)
+- [Week 3: Algorithms](curriculum/weeks/04-algorithms/)
+- [Week 4: React Native](curriculum/weeks/05-native/)
+- [Week 5: Production Deployment](curriculum/weeks/06-prod/)
+- [Week 6: AI Applications](curriculum/weeks/07-ai/)
 
 View all curriculum materials in [curriculum/](curriculum/).
 
