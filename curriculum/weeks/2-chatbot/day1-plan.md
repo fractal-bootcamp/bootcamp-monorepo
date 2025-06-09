@@ -90,13 +90,13 @@ Complete these 3 sections on day 1:
 2. Message Persistence: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-message-persistence
 3. Tool Usage: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-tool-usage
 
-Complete these 6 sections on day 2:
-4. Generative UI: https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces
-5. Completions: https://ai-sdk.dev/docs/ai-sdk-ui/completion
-6. Object Generation: https://ai-sdk.dev/docs/ai-sdk-ui/object-generation
-7. RAG: https://ai-sdk.dev/docs/guides/rag-chatbot
-8. Reading Images & PDFs: https://ai-sdk.dev/docs/guides/multi-modal-chatbot
-9. Natural Language SQL Queries: https://ai-sdk.dev/docs/guides/natural-language-postgres
+Complete these 6 sections on day 2:  
+4. Generative UI: https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces  
+5. Completions: https://ai-sdk.dev/docs/ai-sdk-ui/completion  
+6. Object Generation: https://ai-sdk.dev/docs/ai-sdk-ui/object-generation  
+7. RAG: https://ai-sdk.dev/docs/guides/rag-chatbot  
+8. Reading Images & PDFs: https://ai-sdk.dev/docs/guides/multi-modal-chatbot  
+9. Natural Language SQL Queries: https://ai-sdk.dev/docs/guides/natural-language-postgres  
 
 On day 3, we will focus on improving our app with authentication and some more production features for users.
 
