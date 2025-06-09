@@ -55,4 +55,12 @@ There are two places where we are saving the messages that the user sends us.
 
 ## 3. How does Vercel retrieve the messages and send them back to the client when requested?
 
-TBD
+Well, in order to figure this out, I want to go to the PAGE where the client can see and interact with the chat. Because that Page is probably requesting the chats.
+
+That's `app/(chat)/chat/[id]/page.tsx` [here](https://github.com/vercel/ai-chatbot/blob/main/app/(chat)/chat/%5Bid%5D/page.tsx#L12).
+
+This corresponds to the page you see when you navigate to `http://localhost:3000/app/chat/:id` in your browser.
+
+Immediately, we can see that they [get the messages from the DB](https://github.com/vercel/ai-chatbot/blob/main/app/(chat)/chat/%5Bid%5D/page.tsx#L37-L52) and then [convertToUIMessages](https://github.com/vercel/ai-chatbot/blob/main/app/(chat)/chat/%5Bid%5D/page.tsx#L37-L52):
+
+<img src="rendering.png" alt="References" width="600">
