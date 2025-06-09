@@ -69,6 +69,8 @@ See drizzle docs: https://orm.drizzle.team/docs/overview
 bun run db:push
 ```
 
+4. Follow the rest of the [AI SDK](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot) tutorial documentation
+
 ### We have these features to build in our app in the next 2-3 days:
 1. Chatbot Tutorial: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot
 2. Message Persistence: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-message-persistence
