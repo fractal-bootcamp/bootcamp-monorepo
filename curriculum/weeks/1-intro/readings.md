@@ -14,7 +14,7 @@
 - [What is a database?](https://www.whalesync.com/blog/an-intro-to-databases) <span title="~10 min, 3-databases prework">⏱️</span>  
   <sub>Note: You can ignore the stuff about Whalesync, but we are going to use Supabase!</sub>
 
-**Assignments:**
+**Practice:**
 - [Learn basic SQL](https://www.executeprogram.com/courses/sql) <span title="~1 hour, 3-databases prework">⏱️</span>
 
 ---
