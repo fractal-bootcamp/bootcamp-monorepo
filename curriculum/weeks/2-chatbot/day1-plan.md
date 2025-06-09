@@ -63,7 +63,7 @@ export function Chat() {
 
 3. Setup database:
 
-See drizzle docs: https://orm.drizzle.team/docs/overview
+See [drizzle docs](https://orm.drizzle.team/docs/overview)
 
 ```bash
 bun run db:push
@@ -72,37 +72,43 @@ bun run db:push
 4. Follow the rest of the [AI SDK](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot) tutorial documentation
 
 ### We have these features to build in our app in the next 2-3 days:
-1. Chatbot Tutorial: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot
-2. Message Persistence: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-message-persistence
-3. Tool Usage: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-tool-usage
-4. Generative UI: https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces
-5. Completions: https://ai-sdk.dev/docs/ai-sdk-ui/completion
-6. Object Generation: https://ai-sdk.dev/docs/ai-sdk-ui/object-generation
-7. RAG: https://ai-sdk.dev/docs/guides/rag-chatbot
-8. Reading Images & PDFs: https://ai-sdk.dev/docs/guides/multi-modal-chatbot
-9. Natural Language SQL Queries: https://ai-sdk.dev/docs/guides/natural-language-postgres
+1. [Chatbot Tutorial](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot)
+2. [Message Persistence](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-message-persistence)
+3. [Tool Usage](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-tool-usage)
+4. [Generative UI](https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces)
+5. [Completions](https://ai-sdk.dev/docs/ai-sdk-ui/completion)
+6. [Object Generation](https://ai-sdk.dev/docs/ai-sdk-ui/object-generation)
+7. [RAG](https://ai-sdk.dev/docs/guides/rag-chatbot)
+8. [Reading Images & PDFs](https://ai-sdk.dev/docs/guides/multi-modal-chatbot)
+9. [Natural Language SQL Queries](https://ai-sdk.dev/docs/guides/natural-language-postgres)
 
 It will be a lot of learning, and we'll be delivering lectures on the trickiest components as they come up.
 
 ## Part 3. Good Progress:
 Complete these 3 sections on day 1:
-1. Chatbot Tutorial: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot
-2. Message Persistence: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-message-persistence
-3. Tool Usage: https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-tool-usage
+1. [Chatbot Tutorial](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot)
+2. [Message Persistence](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-message-persistence)
+3. [Tool Usage](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-tool-usage)
 
 Complete these 6 sections on day 2:
-4. Generative UI: https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces
-5. Completions: https://ai-sdk.dev/docs/ai-sdk-ui/completion
-6. Object Generation: https://ai-sdk.dev/docs/ai-sdk-ui/object-generation
-7. RAG: https://ai-sdk.dev/docs/guides/rag-chatbot
-8. Reading Images & PDFs: https://ai-sdk.dev/docs/guides/multi-modal-chatbot
-9. Natural Language SQL Queries: https://ai-sdk.dev/docs/guides/natural-language-postgres
+
+4. [Generative UI](https://ai-sdk.dev/docs/ai-sdk-ui/generative-user-interfaces)
+
+5. [Completions](https://ai-sdk.dev/docs/ai-sdk-ui/completion)
+
+6. [Object Generation](https://ai-sdk.dev/docs/ai-sdk-ui/object-generation)
+
+7. [RAG](https://ai-sdk.dev/docs/guides/rag-chatbot)
+
+8. [Reading Images & PDFs](https://ai-sdk.dev/docs/guides/multi-modal-chatbot)
+
+9. [Natural Language SQL Queries](https://ai-sdk.dev/docs/guides/natural-language-postgres)
 
 On day 3, we will focus on improving our app with authentication and some more production features for users.
 
 
 ### Some interesting tools to help:
-- https://ui.shadcn.com/
+- [shadcn/ui](https://ui.shadcn.com/)
 
 
 ### Other things to look at:
