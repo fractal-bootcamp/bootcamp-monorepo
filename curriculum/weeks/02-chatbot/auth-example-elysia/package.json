@@ -1,0 +1,36 @@
+{
+    "name": "auth-api-elysia-example",
+    "version": "1.0.0",
+    "description": "Complete authentication and AI chat API using ElysiaJS with TypeScript",
+    "main": "dist/index.js",
+    "scripts": {
+        "dev": "bun run --watch src/index.ts",
+        "build": "bun build src/index.ts --outdir dist --target node",
+        "start": "bun run dist/index.js",
+        "type-check": "bun --bun tsc --noEmit"
+    },
+    "keywords": [
+        "authentication",
+        "jwt",
+        "elysia",
+        "api",
+        "swagger",
+        "typescript"
+    ],
+    "author": "Fractal Bootcamp",
+    "license": "MIT",
+    "dependencies": {
+        "elysia": "latest",
+        "@elysiajs/swagger": "latest",
+        "@elysiajs/jwt": "latest",
+        "@elysiajs/cookie": "latest",
+        "@elysiajs/cors": "latest",
+        "@elysiajs/bearer": "latest",
+        "@ai-sdk/openai": "^0.0.66",
+        "ai": "^3.4.32"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "typescript": "^5.3.3"
+    }
+}
