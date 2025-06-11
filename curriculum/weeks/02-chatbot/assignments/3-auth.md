@@ -1,7 +1,5 @@
 # Authentication & API Development (3 days)
 
-[https://github.com/fractal-bootcamp/jakezegil.express-app-day4](https://github.com/fractal-bootcamp/jakezegil.express-app-day4)
-
 ## Reading
 
 [https://thecopenhagenbook.com/](https://thecopenhagenbook.com/)
