@@ -1,14 +1,30 @@
 # Authentication & API Development (3 days)
 
 ## Reading
-
 [https://thecopenhagenbook.com/](https://thecopenhagenbook.com/)
 
 ## Lecture Code
 
+For today's assignment, we're taking a step back from NextJS and implementing Authentication and AI requests on our own server using expressJS (or some other server framework, like Elysia, which I personally prefer for projects, but is basically beta software lol).
+
+Hopefully, this teaches you a couple things:
+1. How Auth works for APIs and Websites and how you can implement it.
+2. How NextJS works (essentially) since it's both a server AND a client framework.
+
 ## Overview
 
-You will implement (3x) email/password authentication using firebase, Cookies and JWT, and Clerk. Additionally, you'll create authenticated API endpoints using the Vercel AI SDK (or similar) and document them with OpenAPI specifications.
+You will implement authentication in three ways: 
+1. A custom username/password system with in-memory users and secrets,
+2. JWT-based authentication with secure cookies,
+3. More professional authentication using Better-Auth.
+
+For each approach, you will:
+- Build login, logout, and signup flows (client and server).
+- Protect API endpoints using your authentication method.
+- Use the Vercel AI SDK to power authenticated AI chat endpoints.
+- Fully document your API with OpenAPI/Swagger, including authentication flows, request/response schemas, and example requests and responses.
+
+The goal is to deeply understand authentication at every layer, and to produce a professional, well-documented API suitable for production.
 [Please read the Copenhagen book.](https://thecopenhagenbook.com/)
 
 also maybe watch this [100 sec primer](https://www.youtube.com/watch?v=UBUNrFtufWo) on auth
@@ -75,12 +91,11 @@ This assignment builds a **single application** that you'll develop incrementall
   ```
 - [ ] Update middleware to check for secret in:
   - [ ] `Authorization` header: `Bearer admin-secret-123`
-  - [ ] OR Cookie: `secret=admin-secret-123`
 - [ ] Find user by secret, check if role is "admin"
 - [ ] **Success**: Now the protected endpoint actually works!
 
 ### Step 6: Realize the Problems with Secrets
-Discuss these security issues:
+Think about these security issues:
 1. **Interception**: Anyone who sees the network request gets the secret
 2. **Theft**: Malicious browser extensions can steal cookies
 3. **No Expiry**: Secrets never expire - if stolen, they work forever
@@ -251,8 +266,7 @@ If you choose Elysia, you get:
 
 - YOU MUST READ THIS: The Copenhagen Book, A Guide To Auth \-- [https://thecopenhagenbook.com/](https://thecopenhagenbook.com/)  
 - What is a JWT? \- [Docs](https://jwt.io/introduction)  
-- Cookies in Web Development: MDN Web Docs \- [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)  
-- Clerk Documentation \= [React \+ Express](https://clerk.com/docs/references/react/overview)  
+- Cookies in Web Development: MDN Web Docs \- [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 - Middleware in Express \- [https://expressjs.com/en/guide/using-middleware.html\#middleware.router](https://expressjs.com/en/guide/using-middleware.html#middleware.router)  
 - [Adding auth in express using Better Auth](https://www.better-auth.com/docs/integrations/express)
 
