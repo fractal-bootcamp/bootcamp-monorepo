@@ -144,6 +144,9 @@ Think about these security issues:
   - [ ] Use returned JWT in "Authorize" button
   - [ ] Access protected endpoints (should work)
 
+
+# Note: swap to [./4-better-auth.md](./4-better-auth.md) at this point; you are ready to use NextJS now that you've built this all using ElysiaJS.
+
 ### Step 13: Professional Implementation with Better Auth
 - [ ] Replace your custom system with [Better Auth](https://www.better-auth.com/)
 - [ ] Implement proper user database
