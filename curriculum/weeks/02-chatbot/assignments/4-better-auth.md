@@ -50,7 +50,7 @@ Bonus Features:
 
 ## Implementation Steps
 
-0. **Practice Better Auth**
+0. **(optional) Practice Better Auth**
    - Put [this tutorial video](https://www.youtube.com/watch?v=gzYTDGToYcw) on one monitor, and put your project and the docs on another, side by side.
    - Follow along the tutorial video, make a simple, vanilla [create-next-app](https://nextjs.org/docs/app/api-reference/cli/create-next-app) typescript app
    - The tutorial uses Drizzle ORM, Neon for serverless postgres, ShadCN, and Better Auth, so it is perfect for understanding the basics.
