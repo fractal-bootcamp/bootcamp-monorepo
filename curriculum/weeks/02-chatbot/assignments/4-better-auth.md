@@ -16,23 +16,27 @@ Better Auth is a modern, type-safe authentication library that provides a great 
 ## Features
 
 A complete authentication system should have the following:
-- [ ] **Authentication Backend**
-      - [ ] Set up Better Auth with your existing Drizzle database
-      - [ ] Configure authentication providers (Email/Password, Google, GitHub)
-      - [ ] Generate authentication database schemas (users and sessions)
-- [ ] **Frontend Authentication UI**
-      - [ ] Beautiful sign-in/sign-up forms with proper validation
-      - [ ] User profile management page
-      - [ ] Session management (login/logout functionality)
-      - [ ] Protected route middleware for chat functionality
-      - [ ] Loading states and error handling for auth flows
-- [ ] **Chat Integration**
-      - [ ] Associate chat messages with authenticated users
-      - [ ] Implement user-specific chat history
-      - [ ] Add user avatars and display names to chat interface
-      - [ ] Secure chat API endpoints with authentication checks
 
-Bonus Features:
+- [ ] **Authentication Backend**
+  - [ ] Set up Better Auth with your existing Drizzle database
+  - [ ] Configure authentication providers (Email/Password, Google, GitHub)
+  - [ ] Generate authentication database schemas (users and sessions)
+
+- [ ] **Frontend Authentication UI**
+  - [ ] Beautiful sign-in/sign-up forms with proper validation
+  - [ ] User profile management page
+  - [ ] Session management (login/logout functionality)
+  - [ ] Protected route middleware for chat functionality
+  - [ ] Loading states and error handling for auth flows
+
+- [ ] **Chat Integration**
+  - [ ] Associate chat messages with authenticated users
+  - [ ] Implement user-specific chat history
+  - [ ] Add user avatars and display names to chat interface
+  - [ ] Secure chat API endpoints with authentication checks
+
+**Bonus Features:**
+
 - [ ] **[Advanced Auth]** - Multiple authentication providers (Google, GitHub, Discord)
 - [ ] **[User Management]** - Admin panel for user management
 - [ ] **[Social Features]** - Public chat rooms, user profiles with bio/avatar upload
@@ -112,6 +116,7 @@ export const chats = pgTable("chat", {
 
 
 ## Testing Strategy
+
 - [ ] Test all authentication flows (signup, signin, logout, password reset)
 - [ ] Verify protected routes are properly secured
 - [ ] Test social login providers
