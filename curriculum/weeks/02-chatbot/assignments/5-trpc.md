@@ -132,3 +132,8 @@ import { api } from "~/trpc/server";
 ## Example Repo
 - Use this for inspiration. Don't copy/paste! Make sure you understand what each individual line is doing!
 - https://github.com/fractal-bootcamp/assignment-trpc
+
+## Helpful Diagrams
+
+![](our-trpc-setup.png)
+![](trpc-data-flows.webp)
