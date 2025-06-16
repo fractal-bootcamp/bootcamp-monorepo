@@ -5,35 +5,20 @@ Next.js, Typescript, Drizzle, Postgres, TRPC. Now, let's put it to use.
 
 ## Overview
 
-This week is all about building something meaningful while applying everything we've learned. You'll be working on a project of your choice that will serve as a portfolio piece, demonstrating your ability to build full-stack applications using modern tools and best practices. What exactly are you building? That's up to you!
+This week is all about building something meaningful while applying everything we've learned. You'll be working on a project of your choice that will serve as a portfolio piece, demonstrating your ability to build interesting and/or useful full-stack applications. What exactly are you building? That's up to you!
 
-## Goals
+For many of you, it will make sense to extend your previous chat app in various interesting ways; in fact, many of you already have!
 
-1. **Portfolio Development**
-   - Design and build a project that showcases your skills
-   - Create something you're proud to share with potential employers
-   - Demonstrate your ability to work with our core stack
+For others, it may make sense to extend your hackathon project from this weekend.
 
-2. **Technical Growth**
-   - Master our core stack: Next.js, TypeScript, Drizzle, Postgres, and TRPC
-   - Implement proper authentication using BetterAuth
-   - Apply best practices in code organization and architecture
-
-3. **Tooling Proficiency**
-   - Gain hands-on experience with essential development tools
-   - Learn to implement and use critical development workflows
-   - Understand the importance of proper testing, monitoring, and deployment
-
-4. **Product Engineering Mindset**
-   - Learn to think like a product engineer
-   - Balance technical excellence with user needs
-   - Make informed decisions about features and implementation
+This project is not to be vibe-coded. No vibe coding, no AI use except purely for learning, just like before.
 
 ## Project Requirements
 
 Your project should:
 
 1. **Technical Requirements**
+   - Feature or expose heavy use of AI and the Vercel AI SDK at its core (possibly optional, but talk to us).
    - Use our core stack (Next.js, TypeScript, Drizzle, Postgres, TRPC)
    - Implement proper authentication
    - Follow best practices for code organization
@@ -53,24 +38,22 @@ Your project should:
 ## Getting Started
 
 1. **Project Selection**
-   - Choose a project that interests you
-   - Ensure it's scoped appropriately for one week
+   - Choose a project that FUNDAMENTALLY INTERESTS YOU. Which you LOVE and want to EXIST and SHOW TO PEOPLE.
+   - Ensure it's scoped appropriately for ONE WEEK. You will over-scope it. Seriously, you're going to over-scope it. Try to scope it for 2 days of work. If it's done by the end of Tuesday and you can go purely into polish mode, you know you did a good job with scope.
    - Consider how it can showcase your skills
 
 2. **Planning**
-   - Create a project roadmap
-   - Break down features into manageable tasks
-   - Build a nice "boxes and arrows" diagram of the high-level plan
-   - Set up your development environment
+   - Create a project roadmap / developer todo list
+   - Build a nice "boxes and arrows" diagram of the high-level architecture
 
 3. **Development**
-   - Follow the daily assignments
-   - Implement features incrementally
-   - Test thoroughly as you go
+   - Continue to complete any daily assignments & readings if applicable
+   - Implement features incrementally; notice what works well and does not work well during project management
+   - Test your system thoroughly as you go
 
 ## Project Selection
 
-What project you make up to you! Spend some time early this week coming up with a project that:
+What project you make is up to you! Spend some time early this week coming up with a project that:
  - is easy enough to do in about a week
  - uses all the skills we've learned so far
  - contains things you don't know how to do yet, expanding your skillset
