@@ -72,5 +72,6 @@ Your project will be considered successful if it:
 1. Demonstrates mastery of our core stack
 2. Shows attention to code quality and best practices
 3. Implements proper tooling and development workflows
-4. Serves as a strong portfolio piece
+4. Serves as a strong portfolio piece (therefore it must be deployed!)
 5. Reflects your growth as a product engineer
+6. Is cool and interesting and neat and makes people go "ooh" and "aah"
