@@ -19,3 +19,7 @@ Also, ONCE AGAIN, because I REALLY THINK SOME OF YOU NEED TO DO THIS MULTIPLE TI
 
 1. [What is React and NextJS / React Foundations (finish the whole course)](https://nextjs.org/learn/react-foundations/what-is-react-and-nextjs)
 2. [What is NextJS App Router (finish the whole course, please)](https://nextjs.org/learn/dashboard-app)
+
+
+Also an even further bonus video on common NextJS Mistakes:
+- [All 29 Beginniner NextJS Mistakes](https://www.youtube.com/watch?v=5QP0mvrJkiY)
