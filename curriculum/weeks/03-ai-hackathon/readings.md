@@ -6,6 +6,7 @@ This Weeks Readings (pick any order, but read one per day and post about it in d
 - [React for two computers](https://overreacted.io/react-for-two-computers/)
 - [What does "use client" do?](https://overreacted.io/what-does-use-client-do/)
 - [One roundtrip per navigation](https://overreacted.io/one-roundtrip-per-navigation/)
+- [Common mistakes with NextJS App Router and How To Fix Them](https://vercel.com/blog/common-mistakes-with-the-next-js-app-router-and-how-to-fix-them)
 
 
 Bonus/Optional Humor essays, read all of these together as one reading (apologies for the crude humor, it's something of programming culture, but these essays are genuinely informative):
