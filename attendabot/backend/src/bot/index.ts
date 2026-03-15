@@ -45,6 +45,7 @@ import {
   getCohortSentiment,
   saveCohortSentiment,
   isFeatureFlagEnabled,
+  isBreakDay,
 } from "../services/db";
 import { isLLMConfigured, generateCohortSentiment } from "../services/llm";
 import { backupDatabaseToS3 } from "../services/s3backup";
@@ -130,6 +131,7 @@ function scheduleJobs(): void {
     DB_BACKUP_CRON,
     () => backupDatabaseToS3(),
     "Database backup to S3",
+    { runDuringBreak: true },
   );
 }
 
@@ -299,11 +301,19 @@ function scheduleTask(
   cronExpression: string,
   task: () => Promise<string[] | void>,
   description: string,
+  options?: { runDuringBreak?: boolean },
 ): void {
   try {
     cron.schedule(
       cronExpression,
       () => {
+        if (!options?.runDuringBreak && isBreakDay()) {
+          sendChannelMessage(
+            BOT_TEST_CHANNEL_ID,
+            `⏸️ **Cron skipped (break):** ${description}`,
+          ).catch(() => {});
+          return;
+        }
         const timestamp = new Date().toLocaleString("en-US", {
           timeZone: CRON_TIMEZONE,
         });

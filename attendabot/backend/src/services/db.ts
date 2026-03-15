@@ -908,6 +908,29 @@ export function getDefaultCohortId(): number | null {
   return result?.id ?? null;
 }
 
+/**
+ * Checks if today is within the current cohort's break period.
+ * Compares today's date (in YYYY-MM-DD format) against the cohort's
+ * break_start and break_end fields (both inclusive).
+ */
+export function isBreakDay(): boolean {
+  const cohortId = getDefaultCohortId();
+  if (cohortId == null) return false;
+
+  const db = getDatabase();
+  const stmt = db.prepare(
+    `SELECT break_start, break_end FROM cohorts WHERE id = ?`,
+  );
+  const row = stmt.get(cohortId) as
+    | { break_start: string | null; break_end: string | null }
+    | undefined;
+
+  if (!row?.break_start || !row?.break_end) return false;
+
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD in UTC
+  return today >= row.break_start && today <= row.break_end;
+}
+
 // ============================================================================
 // LLM Summary/Sentiment Cache functions
 // ============================================================================
