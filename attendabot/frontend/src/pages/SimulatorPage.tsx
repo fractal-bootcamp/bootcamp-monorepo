@@ -9,6 +9,7 @@ import { flows } from "../simulations/authData";
 import ScalingSimulatorApp from "../simulations/ScalingSimulatorApp";
 import { scalingFrames } from "../simulations/scalingData";
 import CrawlerSimulatorApp from "../simulations/CrawlerSimulatorApp";
+import RagSimulatorApp from "../simulations/RagSimulatorApp";
 import { SimulationsHub } from "../components/SimulationsHub";
 
 /** Thin wrapper that maps URL params to SimulatorApp props. */
@@ -56,6 +57,14 @@ export function SimulatorPage() {
     return (
       <div className="app app-wide">
         <CrawlerSimulatorApp />
+      </div>
+    );
+  }
+
+  if (kind === "rag") {
+    return (
+      <div className="app app-wide">
+        <RagSimulatorApp />
       </div>
     );
   }

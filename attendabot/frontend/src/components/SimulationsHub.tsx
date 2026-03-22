@@ -25,6 +25,13 @@ const simulations = [
       "Step through the complete 16-step crawl sequence: from seed URL injection through deduplication, S3 storage, seen filtering, and full-text search indexing.",
     url: "/simulations/crawler",
   },
+  {
+    id: "rag",
+    title: "RAG Conversational Search",
+    description:
+      "How a video-first social media app implements conversational search using Retrieval-Augmented Generation — from video upload and embedding indexing to hybrid retrieval and grounded LLM responses.",
+    url: "/simulations/rag",
+  },
 ];
 
 /** Renders a grid of available simulation cards. */

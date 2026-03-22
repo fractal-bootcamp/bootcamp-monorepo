@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { crawlerNodes, crawlerEdges, crawlerSteps, NODE_W, NODE_H } from "./crawlerData";
-import crawlerPng from "./web-crawler.png";
+import { ragNodes, ragEdges, ragSteps, NODE_W, NODE_H } from "./ragData";
+import ragPng from "./video-upload-and-RAG-conversational-search.png";
 import FullDiagramImage from "./FullDiagramImage";
 import "./simulations.css";
 
-const HW = NODE_W / 2; // half-width: 74
+const HW = NODE_W / 2; // half-width: 75
 const HH = NODE_H / 2; // half-height: 22
 const STEP_DELAY = 2400;
 
@@ -27,7 +27,7 @@ function boxEdgePoint(
   return [fromCx + dx * t, fromCy + dy * t];
 }
 
-export default function CrawlerDiagram() {
+export default function RagDiagram() {
   const [activeStep, setActiveStep] = useState(-1);
   const [playing, setPlaying] = useState(false);
   const [showFullDiagram, setShowFullDiagram] = useState(false);
@@ -35,7 +35,7 @@ export default function CrawlerDiagram() {
   // Auto-play timer
   useEffect(() => {
     if (!playing) return;
-    if (activeStep >= crawlerSteps.length - 1) {
+    if (activeStep >= ragSteps.length - 1) {
       setPlaying(false);
       return;
     }
@@ -44,7 +44,7 @@ export default function CrawlerDiagram() {
   }, [playing, activeStep]);
 
   const play = useCallback(() => {
-    if (activeStep >= crawlerSteps.length - 1) setActiveStep(-1);
+    if (activeStep >= ragSteps.length - 1) setActiveStep(-1);
     setTimeout(() => {
       setActiveStep((s) => (s < 0 ? 0 : s));
       setPlaying(true);
@@ -53,7 +53,7 @@ export default function CrawlerDiagram() {
 
   const next = useCallback(() => {
     setPlaying(false);
-    setActiveStep((s) => Math.min(s + 1, crawlerSteps.length - 1));
+    setActiveStep((s) => Math.min(s + 1, ragSteps.length - 1));
   }, []);
 
   const prev = useCallback(() => {
@@ -85,34 +85,31 @@ export default function CrawlerDiagram() {
   }, [next, prev, reset]);
 
   const nodeMap = useMemo(() => {
-    const map: Record<string, (typeof crawlerNodes)[0]> = {};
-    for (const n of crawlerNodes) map[n.id] = n;
+    const map: Record<string, (typeof ragNodes)[0]> = {};
+    for (const n of ragNodes) map[n.id] = n;
     return map;
   }, []);
 
-  const currentStep = activeStep >= 0 ? crawlerSteps[activeStep] : null;
+  const currentStep = activeStep >= 0 ? ragSteps[activeStep] : null;
   const activeEdgeIds = useMemo(() => new Set(currentStep?.edges ?? []), [currentStep]);
   const activeNodeIds = useMemo(() => new Set(currentStep?.nodes ?? []), [currentStep]);
   const stepColor = currentStep?.color ?? "#6366f1";
 
-  // Build a map of edge → last step color it was activated in (for "past" dim state)
+  // Build a map of edge -> last step color it was activated in (for "past" dim state)
   const pastEdgeColors = useMemo(() => {
     const info: Record<string, string> = {};
     for (let i = 0; i < activeStep; i++) {
-      for (const eid of crawlerSteps[i].edges) {
-        info[eid] = crawlerSteps[i].color;
+      for (const eid of ragSteps[i].edges) {
+        info[eid] = ragSteps[i].color;
       }
     }
     return info;
   }, [activeStep]);
 
-  const isSeedStep = currentStep?.num === "1";
-  const workerNode = nodeMap["worker"];
-
   return (
     <div className="flow-diagram">
       <div className="flow-layout">
-        {/* ── Sidebar: controls + description ── */}
+        {/* -- Sidebar: controls + description -- */}
         <div className="flow-sidebar">
           <div className="controls">
             <button onClick={reset} className="ctrl-btn" title="Reset (R)">
@@ -138,7 +135,7 @@ export default function CrawlerDiagram() {
             <button
               onClick={next}
               className="ctrl-btn"
-              disabled={activeStep >= crawlerSteps.length - 1}
+              disabled={activeStep >= ragSteps.length - 1}
               title="Next (→)"
             >
               ▶
@@ -151,8 +148,8 @@ export default function CrawlerDiagram() {
             </button>
             <span className="step-counter">
               {activeStep >= 0
-                ? `${activeStep + 1} / ${crawlerSteps.length}`
-                : `${crawlerSteps.length} steps`}
+                ? `${activeStep + 1} / ${ragSteps.length}`
+                : `${ragSteps.length} steps`}
             </span>
           </div>
 
@@ -189,30 +186,30 @@ export default function CrawlerDiagram() {
               </>
             ) : (
               <div className="flow-header">
-                <h2>Web Crawler Pipeline</h2>
+                <h2>RAG Conversational Search</h2>
                 <p className="flow-subtitle">
-                  Step through the complete 16-step crawl sequence: from seed URL injection
-                  to full-text indexing and recrawl scheduling.
+                  Step through the complete 20-step pipeline: from video upload and
+                  metadata indexing to hybrid retrieval and grounded LLM responses.
                 </p>
               </div>
             )}
           </div>
         </div>
 
-        {/* ── Main: SVG architecture diagram or full PNG ── */}
+        {/* -- Main: SVG architecture diagram or full PNG -- */}
         <div className="flow-main">
           {showFullDiagram ? (
-            <FullDiagramImage src={crawlerPng} alt="Web crawler full architecture diagram" />
+            <FullDiagramImage src={ragPng} alt="RAG conversational search full architecture diagram" />
           ) : null}
           <svg
-            viewBox="0 0 910 665"
+            viewBox="0 0 900 650"
             style={{ width: "100%", display: showFullDiagram ? "none" : "block" }}
-            aria-label="Web crawler architecture diagram"
+            aria-label="RAG conversational search architecture diagram"
           >
             <defs>
               {/* Arrowhead that inherits the line's stroke color (SVG 2 context-stroke) */}
               <marker
-                id="arrow"
+                id="rag-arrow"
                 viewBox="0 0 10 7"
                 refX="9"
                 refY="3.5"
@@ -224,16 +221,51 @@ export default function CrawlerDiagram() {
               </marker>
             </defs>
 
-            {/* ── Edges (rendered before nodes so nodes draw on top) ── */}
-            {crawlerEdges.map((edge) => {
-              if (edge.from === edge.to) return null; // self-loop handled separately
+            {/* -- AWS region box (behind everything) -- */}
+            <rect
+              x={1}
+              y={140}
+              width={684}
+              height={498}
+              fill="none"
+              stroke="#94a3b8"
+              strokeWidth={1.5}
+              strokeDasharray="8 5"
+              rx={6}
+            />
+            <text
+              x={12}
+              y={158}
+              fontSize="10"
+              fontWeight="700"
+              fill="#94a3b8"
+              fontFamily="inherit"
+              style={{ textTransform: "uppercase", letterSpacing: "0.08em" }}
+            >
+              AWS
+            </text>
 
+            {/* -- Edges (rendered before nodes so nodes draw on top) -- */}
+            {ragEdges.map((edge) => {
               const fromNode = nodeMap[edge.from];
               const toNode = nodeMap[edge.to];
               if (!fromNode || !toNode) return null;
 
-              const [x1, y1] = boxEdgePoint(fromNode.cx, fromNode.cy, toNode.cx, toNode.cy);
-              const [x2, y2] = boxEdgePoint(toNode.cx, toNode.cy, fromNode.cx, fromNode.cy);
+              let [x1, y1] = boxEdgePoint(fromNode.cx, fromNode.cy, toNode.cx, toNode.cy);
+              let [x2, y2] = boxEdgePoint(toNode.cx, toNode.cy, fromNode.cx, fromNode.cy);
+
+              // Apply perpendicular offset for bidirectional/parallel edges
+              if (edge.offset) {
+                const dx = x2 - x1;
+                const dy = y2 - y1;
+                const len = Math.sqrt(dx * dx + dy * dy);
+                if (len > 0) {
+                  const px = -dy / len * edge.offset;
+                  const py = dx / len * edge.offset;
+                  x1 += px; y1 += py;
+                  x2 += px; y2 += py;
+                }
+              }
 
               const isActive = activeEdgeIds.has(edge.id);
               const pastColor = pastEdgeColors[edge.id];
@@ -266,78 +298,13 @@ export default function CrawlerDiagram() {
                   stroke={stroke}
                   strokeWidth={strokeWidth}
                   opacity={opacity}
-                  markerEnd="url(#arrow)"
+                  markerEnd="url(#rag-arrow)"
                 />
               );
             })}
 
-            {/* ── Worker self-loop (step 6: fetch & process) ── */}
-            {(() => {
-              const isSelfActive = activeEdgeIds.has("worker→worker");
-              const pastColor = pastEdgeColors["worker→worker"];
-              const stroke = isSelfActive ? stepColor : pastColor ? pastColor : "#cbd5e1";
-              const sw = isSelfActive ? 2.5 : 1.5;
-              const opacity = pastColor && !isSelfActive ? 0.3 : 1;
-              const rx = workerNode.cx + HW; // right edge: 514
-
-              return (
-                <g opacity={opacity}>
-                  <path
-                    d={`M ${rx},${workerNode.cy - 10} C ${rx + 58},${workerNode.cy - 48} ${rx + 58},${workerNode.cy + 48} ${rx},${workerNode.cy + 10}`}
-                    fill="none"
-                    stroke={stroke}
-                    strokeWidth={sw}
-                    markerEnd="url(#arrow)"
-                  />
-                  {isSelfActive && (
-                    <text
-                      x={rx + 62}
-                      y={workerNode.cy}
-                      textAnchor="start"
-                      dominantBaseline="middle"
-                      fontSize="9"
-                      fontWeight="700"
-                      fill={stepColor}
-                      fontFamily="inherit"
-                      style={{ textTransform: "uppercase", letterSpacing: "0.05em" }}
-                    >
-                      fetch &amp; parse
-                    </text>
-                  )}
-                </g>
-              );
-            })()}
-
-            {/* ── Seed arrow (step 1 only: external → frontier) ── */}
-            {isSeedStep && (
-              <g>
-                <text
-                  x={440}
-                  y={8}
-                  textAnchor="middle"
-                  fontSize="9"
-                  fontWeight="700"
-                  fill={stepColor}
-                  fontFamily="inherit"
-                  style={{ textTransform: "uppercase", letterSpacing: "0.06em" }}
-                >
-                  seed
-                </text>
-                <line
-                  x1={440}
-                  y1={13}
-                  x2={440}
-                  y2={31}
-                  stroke={stepColor}
-                  strokeWidth={2}
-                  strokeDasharray="4 3"
-                  markerEnd="url(#arrow)"
-                />
-              </g>
-            )}
-
-            {/* ── Nodes ── */}
-            {crawlerNodes.map((node) => {
+            {/* -- Nodes -- */}
+            {ragNodes.map((node) => {
               const isActive = activeNodeIds.has(node.id);
               const fill = isActive ? node.color + "1a" : "#f8fafc";
               const strokeColor = isActive ? node.color : "#334155";
