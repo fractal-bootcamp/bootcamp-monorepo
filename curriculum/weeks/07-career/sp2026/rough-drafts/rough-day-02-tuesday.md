@@ -1,40 +1,24 @@
-# Day 2: Know Thyself, Market Thyself, Refine
+# Day 2: Sharpen Everything with Claude
 
-Yesterday you laid the foundation — journaling, elevator pitches, auditing your surfaces, and starting to close the gaps. Today you go deeper. You'll figure out who you really are beyond the career framing, translate that into how you present yourself to the world, and then pressure-test everything with both AI and human feedback.
+Yesterday you did the hard work of figuring out who you are, what you want, and where the gaps are. Today you're going to use Claude as a thinking partner to refine, pressure-test, and operationalize all of it.
 
 **This isn't a one-time exercise.** The prompts in this document are designed to be run again — after you ship something new, after a round of interviews teaches you what questions you can't answer yet, after you realize the role you thought you wanted isn't the one you actually want. Your journal, your pitch, your audit — these are living documents. As you gain experience and contact with reality, come back here and run the prompts again. The process gets more valuable each time because you have more to work with.
 
----
+This document is a series of prompts. Each one builds on the last. Open Claude Code from inside your career starter repo and work through them in order.
 
-## Step 0: Checklist — Did You Finish Yesterday's Work?
+## Before you start
 
-Before moving on, check that you have the following artifacts committed and pushed to your career starter repo:
+Make sure all of your work from yesterday is committed and pushed to your repo. You should have:
 
-- [ ] **Journal/reflection** artifacts covering:
-  1. Who am I? (my story, major decisions, what I've learned about myself)
-  2. What can I do? (projects, skills, strengths, what's impressive about my work)
-  3. What can I offer right now? (what I bring day one, my edge, my limits)
-  4. Where do I want to go? (next chapter, what kind of work/environment I want)
-  5. How do I want to grow? (gaps to close, what kind of growth matters most)
-  6. Where do I belong? (what kind of org/team/role fits, specific companies if any)
+- Your **journal/reflection** artifacts from Part 1
+- Your **elevator pitch** document with all four versions (5 seconds, 30 seconds, 60 seconds, 5 minutes) from Part 2
+- Your **audit** document (`.md` file with sections for LinkedIn, personal website, resume, and GitHub) from Part 3
 
-- [ ] **Elevator pitch** document with all four versions:
-  1. 5 seconds (one sentence)
-  2. 30 seconds (a few sentences)
-  3. 60 seconds (a short paragraph)
-  4. 5 minutes (the full picture)
+If you also have your resume as a file in the repo (PDF or otherwise), that'll be useful later. If not, add it now.
 
-- [ ] **Audit** document (`.md` file) with sections for each surface, every item marked Good, Gap, or Misaligned:
-  - LinkedIn: Headline, About section, Experience descriptions, Skills list, Profile photo
-  - Personal website: Identity, Contact info, Links to other surfaces, Core story on homepage, Projects page (with write-ups, live links, code links), Vibes check
-  - Resume: One page, Content matches your story, Impact-focused bullets
-  - GitHub: Profile README, Pinned repos, Project READMEs
+## Prompt 1: The Check-In
 
-- [ ] **Resume** file in the repo (PDF or otherwise) — if it's not there, add it now.
-
-If anything is missing or incomplete, note what's missing and come back to it. **You don't need to have everything perfect to move on** — you can start Part 1 (Market Thyself) right now even if you're still working through yesterday's gaps. The marketing exercise will actually help you fill in what's missing, because it forces you to articulate things from a different angle. Just make sure you circle back and complete everything before the end of the day.
-
-To get a quick AI check on what you have, open Claude Code from your repo directory and run this prompt:
+Start a Claude Code session from your repo directory. Give Claude the following prompt (adjust the file names/paths if yours are different):
 
 ---
 
@@ -97,81 +81,11 @@ To get a quick AI check on what you have, open Claude Code from your repo direct
 
 ---
 
-If Claude flags anything critical, note it and keep moving. You'll have time to address it throughout the day.
+If Claude flags anything as missing or incomplete, go fill it in before moving on. The rest of today's prompts build on having a complete foundation. No point sharpening something that isn't there yet.
 
----
+## Prompt 2: Pressure-Test Your Materials
 
-## Part 1: Market Thyself — The 13 Questions
-
-Yesterday's work was framed around career — roles, skills, companies. That's important, but it's impersonal. Today we go personal. You are a specific person. Figure out who that is, and then tell people who you are.
-
-The best marketing comes from genuine self-knowledge. If you know who you are and what you care about, everything you write — your LinkedIn, your website, your outreach messages — will have a coherence and authenticity that no amount of wordsmithing can fake. If you don't know who you are, everything you write will sound like everyone else.
-
-### The Exercise
-
-Read [Visakanv's 13 Questions I Ask My Marketing Clients](visakanv-marketing.md). Then answer all 13 questions in writing, in a new file in your repo (e.g., `marketing-questions.md`). Be honest. Be specific. Take your time.
-
-The questions, adapted for your situation:
-
-1. **What do you do, and what problem are you looking to solve?** What's your situation right now? What are you trying to figure out?
-2. **What specific outcomes are you looking for? Why? What have you tried so far, what are you thinking of trying next?**
-3. **How would you define the expedition you're on? How can you make people feel good about supporting your expedition?**
-4. **How would you describe your current "brand"? How do your peers describe you to other people? What do you like and what do you not like about this description?**
-5. **What constraints are you operating under? Which of these are actually real, and which can we dismantle or bypass?**
-6. **What's your best stuff? How are you currently presenting it? Could you present it better?**
-7. **What on your todo list are you afraid to do?**
-8. **What are you conflicted about?**
-9. **What do you love about your work? What do you really enjoy? When are you most in flow?**
-10. **What are your aesthetic inspirations?**
-11. **Who are some people you'd like to be mutuals/peers/collaborators with?**
-12. **If you could hand off your entire operation to a clone of yourself, what would you do next?**
-13. **Having thought through all of these things, what do you think is the most compelling thing to do next?**
-
-Don't rush through these. The point isn't to produce answers — it's to *think*. If you find yourself writing a single sentence for a question, you're not going deep enough. If a question makes you uncomfortable, that's probably the one worth spending the most time on.
-
-### Get AI Feedback on Your Answers
-
-Once you've written your answers, run them through Claude for feedback. Give Claude both your answers and the original Visakanv article for context:
-
----
-
-> Read my answers to the 13 marketing questions in `marketing-questions.md`, and also read the original article they're based on in `visakanv-marketing.md`.
->
-> Visakanv's whole approach is about getting past vague, safe, surface-level answers to find what's genuinely true and specific about a person. Evaluate my answers with that standard in mind.
->
-> For each of my 13 answers:
->
-> 1. **Is it specific?** Does it name real things — real people, real projects, real feelings, real constraints? Or is it abstract and could describe anyone? "I want to work at a company that values engineering" is vague. "I want to work somewhere like Linear because I care about craft in developer tools and I've been obsessed with their changelog for a year" is specific.
-> 2. **Is it honest?** Does it feel like me talking, or does it feel like what I think I'm supposed to say? Is there anywhere I'm performing instead of thinking? Any answers that sound like a LinkedIn post instead of a journal entry?
-> 3. **Is it deep enough?** Visakanv says the most valuable moments in his sessions are when clients hesitate, light up, or sigh. Are there any answers where it feels like I stopped one layer too early — where there's clearly more underneath that I didn't dig into?
-> 4. **Is there energy in it?** Which answers feel alive — where I'm clearly engaged and thinking hard? Which ones feel flat — like I was checking a box?
->
-> After the per-question review, tell me:
->
-> - Where is my strongest, most authentic material? What should I lean into harder?
-> - Where am I hiding behind vagueness or playing it safe?
-> - What's the single most important thing I said across all 13 answers that I might not even realize is important?
-> - What question should I go back and completely redo?
->
-> ultrathink
-
----
-
-Work through Claude's feedback. Revise your answers. Then move on to Part 2.
-
-### Translate Into Your Artifacts
-
-Now take what you've learned about yourself from the 13 questions and use it to improve your actual artifacts. Go through each surface and ask: *Does this communicate who I actually am?*
-
-Start with your **personal website** — it's the most complete expression of you. Then work through everything else: your LinkedIn about section, your resume, your GitHub profile, any blog posts or project write-ups. Make small, concrete improvements based on what you discovered in the 13 questions. A better bio. A more honest about page. A project description that captures what you actually care about, not just what you built.
-
-Commit your changes as you go.
-
----
-
-## Part 2: Refine — Automated Feedback
-
-Now we pressure-test everything with structured AI feedback. You'll run three separate prompts — one for each major artifact — and Claude will evaluate your work from two perspectives:
+Now that everything exists, we're going to stress-test it. You'll run three separate prompts — one for each artifact — and Claude will evaluate your work from two perspectives:
 
 **Persona A — The Technical Recruiter.** They're not an engineer. They're a seasoned recruiter whose job is to read hundreds of candidates and decide who's worth putting in front of a hiring manager. They read fast. They're pattern-matching on narrative clarity, role fit, and red flags. They need to walk away able to pitch you to someone in two minutes. If your story is muddled, if your positioning is vague, if they can't figure out what role you'd slot into — you don't get forwarded.
 
@@ -179,17 +93,13 @@ Now we pressure-test everything with structured AI feedback. You'll run three se
 
 The goal isn't to get a grade. The goal is to find the weak spots so you can fix them before a real recruiter or hiring manager sees them.
 
-**Important:** For each of the prompts below, include your marketing questions answers (`marketing-questions.md`) as additional context. This gives Claude a richer picture of who you are, which means better, more specific feedback.
-
 ### Prompt 2a: Journal Review
 
 Your journal is the raw foundation. It's not something you'd hand to a recruiter — but the depth and clarity of your thinking here determines the quality of everything else. If your journal is vague, your pitch will be vague. If you're hand-waving on what you actually built, your resume will hand-wave too.
 
 ---
 
-> Read my journal/reflection artifacts and my marketing questions answers (`marketing-questions.md`). Use the marketing questions answers as additional context about who I am — they'll help you give more specific feedback.
->
-> Evaluate my journal against the rubric below from two perspectives. For every criterion, tell me whether my writing satisfies it, partially satisfies it, or doesn't address it — and quote the specific parts that are strong or weak.
+> Read my journal/reflection artifacts. Evaluate them against the rubric below from two perspectives. For every criterion, tell me whether my writing satisfies it, partially satisfies it, or doesn't address it — and quote the specific parts that are strong or weak.
 >
 > **Persona A — Technical Recruiter:**
 >
@@ -226,9 +136,7 @@ Your pitches are the most distilled version of your story. These are the words y
 
 ---
 
-> Read my elevator pitch document (all four versions: 5-second, 30-second, 60-second, and 5-minute) and my marketing questions answers (`marketing-questions.md`). Use the marketing questions answers as additional context about who I am.
->
-> Evaluate each version against the rubric below from two perspectives. Quote the specific language that's working or not working.
+> Read my elevator pitch document (all four versions: 5-second, 30-second, 60-second, and 5-minute). Evaluate each version against the rubric below from two perspectives. Quote the specific language that's working or not working.
 >
 > **Persona A — Technical Recruiter:**
 >
@@ -264,9 +172,7 @@ Your audit was a self-assessment of your professional surfaces. Now we're going 
 
 ---
 
-> Read my audit document and my marketing questions answers (`marketing-questions.md`). Use the marketing questions answers as additional context about who I am.
->
-> For each surface (LinkedIn, personal website, resume, GitHub), evaluate whether my self-assessment is calibrated. Use the rubric below.
+> Read my audit document. For each surface (LinkedIn, personal website, resume, GitHub), evaluate whether my self-assessment is calibrated. Use the rubric below.
 >
 > **Persona A — Technical Recruiter:**
 >
@@ -290,7 +196,7 @@ Your audit was a self-assessment of your professional surfaces. Now we're going 
 >
 > 1. For each item where my self-assessment is miscalibrated (either too generous or too harsh), tell me what the real assessment should be and why.
 > 2. Give me a prioritized list of the top 3-5 fixes that would make the biggest difference to each persona.
-> 3. For each fix, be specific: don't just say "improve your LinkedIn headline" — tell me what's wrong with it and what a strong version looks like, based on what you know about me from my journal, pitch, and marketing questions.
+> 3. For each fix, be specific: don't just say "improve your LinkedIn headline" — tell me what's wrong with it and what a strong version looks like, based on what you know about me from my journal and pitch.
 >
 > ultrathink
 
@@ -302,30 +208,12 @@ After working through Claude's feedback, go update your audit to reflect the rec
 
 ---
 
-## Part 3: Refine — Human Feedback
-
-Automated feedback finds structural issues. Human feedback finds the things AI can't see — whether your story actually lands, whether you sound like yourself, whether something feels off in a way that's hard to articulate.
-
-**It is your responsibility to get at least one human review on every artifact today.** We are not going to chase you down and make sure you did this. But this is the single highest-leverage thing you can do to improve your materials. It's low-hanging fruit.
-
-Valid sources of human feedback:
-- Instructors (we're happy to review if you ask)
-- Peers in this cohort who you respect and think are running a great process
-- Colleagues or contacts in industry
-- Anyone whose judgment you trust
-
-For each artifact (journal, pitch, audit, marketing questions, and the actual surfaces — LinkedIn, website, resume, GitHub), get at least one person to look at it and tell you what's working and what isn't.
-
-If you're not sure what to ask for, try: *"Can you read this and tell me if it sounds like me? And is there anything that would make you hesitate if you were deciding whether to interview me?"*
-
----
-
 ## Appendix: Resources
 
-- [Visakanv's 13 Questions](visakanv-marketing.md) — the marketing framework for Part 1
 - [Job search algorithm](https://github.com/fractal-nyc/bootcamp-monorepo/blob/main/career/job_search_pipeline.md)
 - [Fractal Tech resume advice and Claude prompt](https://github.com/fractal-nyc/bootcamp-monorepo/tree/main/advice/resume)
 - [Resume/CV Claude interview prompt](https://github.com/fractal-nyc/bootcamp-monorepo/blob/main/career/ELITE_CV_TRANSFORMATION.md)
 - [Career advice and job boards](https://github.com/fractal-nyc/bootcamp-monorepo/blob/main/advice/career1.md)
 - [Spearfishing guide](https://github.com/fractal-nyc/bootcamp-monorepo/tree/main/career/spearfishing)
+- [Visakanv: 13 Questions I Ask My Marketing Clients](visakanv-marketing.md)
 - [Sales consultancy mindset for engineers by Genesis Dayrit, Fa2025](https://www.youtube.com/watch?v=ae0PTs6GB3E)
