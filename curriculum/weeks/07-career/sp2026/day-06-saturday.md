@@ -65,7 +65,7 @@ Your group will scan these and review your profiles in depth. Make sure every li
 
 This is the centerpiece of the report. Include every outreach, conversation, and action you took this week — with the actual messages you sent.
 
-Format your log as a table:
+Format your log as a table as in this example from David:
 
 | Date       | Action Type      | Who                           | What You Did                                                       | What Happened                              | Notes                                                                        |
 | ---------- | ---------------- | ----------------------------- | ------------------------------------------------------------------ | ------------------------------------------ | ---------------------------------------------------------------------------- |
@@ -111,7 +111,7 @@ Include a QR code or link to:
 - Your live demo
 - Your drafted outreach email (the one you'd send to the target company)
 
-**Optional 4. Graphs and data**
+**4. Graphs and data**
 
 Visualize your activity for the week. This doesn't need to be fancy — a bar chart in a spreadsheet, a hand-drawn graph, whatever communicates the volume. Ideas:
 
