@@ -2,7 +2,7 @@
 
 Today we will build a URL shortener similar to Bit.ly or TinyURL. Goal is to be able to handle 1 billion short URLs and 100 million daily active users (DAUs).
 
-Example system design approach: https://www.youtube.com/watch?v=xFeWVugaouk 
+Hello Interview's Approach: https://www.youtube.com/watch?v=iUU4O1sWtJA&t=28s
 
 ## Steel Thread
 
@@ -20,7 +20,7 @@ After you've built this, load-test your server with synthetic traffic with the s
 
 ## Go Deeper
 
-- Persistence: move the storage of long-to-short URL mapping from server memory to a database. The `shortCode` will be the primary 
+- Persistence: move the storage of long-to-short URL mapping from server memory to a database. The `shortCode` will be the primary key
 - Speed: add a Redis or Memcached instance to cache popular short URLs (this addresses the "celebrity problem")
 - Analytics: record the number of clicks on each short URL and visualize them.
 - Scalability: split the Read and Write APIs onto separate servers so they can be scaled independently (observe that for URL shorteners there are likely to be many more reads than writes).
