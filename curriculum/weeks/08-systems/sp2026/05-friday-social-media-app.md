@@ -1,10 +1,11 @@
-# Systems Engineering Week: Friday
+# Systems Engineering Week: Social Media App
 
 Today we will build a social media app similar to Instagram or Twitter. Goal is to be able to handle 500M DAU with 100M posts per day.
 
 Example system design approaches:
-- Jordan Has No Life: https://www.youtube.com/watch?v=S2y9_XYOZsg
+
 - Hello Interview: https://www.youtube.com/watch?v=Nfa-uUHuFHg
+- Jordan Has No Life: https://www.youtube.com/watch?v=S2y9_XYOZsg
 
 ## Functional Requirements
 
@@ -16,14 +17,14 @@ Example system design approaches:
 
 To start, implement the core functionality of the social media app. Start with a single API server that handles all operations in memory.
 
-- 
-- Instrument these endpoints to measure latency and error rates using OTel LGTM. 
+-
+- Instrument these endpoints to measure latency and error rates using OTel LGTM.
 
 After you've built this, load-test your server with synthetic traffic with the suggested [load testing](week-plan-claude-enhanced.md#load-testing) tools. Aim to make your traffic "realistic".
 
 ## Go Deeper
 
-- 
+-
 
 ## Artifact
 

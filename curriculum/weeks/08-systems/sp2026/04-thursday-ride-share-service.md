@@ -1,10 +1,11 @@
-# Systems Engineering Week: Thursday
+# Systems Engineering Week: Ride Share Service
 
 Today we will build a ride share service similar to Uber or Lyft. Goal is to be able to handle 100M daily active users, 15M rides per day.
 
 Example system design approaches:
-- Jordan Has No Life: https://www.youtube.com/watch?v=rUAdeHpCPq8
+
 - Hello Interview: https://www.youtube.com/watch?v=lsKU38RKQSo
+- Jordan Has No Life: https://www.youtube.com/watch?v=rUAdeHpCPq8
 
 ## Functional Requirements
 
@@ -16,14 +17,14 @@ Example system design approaches:
 
 To start, implement the core functionality of the ride share service. Start with a single API server that handles all operations in memory.
 
-- 
-- Instrument these endpoints to measure latency and error rates using OTel LGTM. 
+-
+- Instrument these endpoints to measure latency and error rates using OTel LGTM.
 
 After you've built this, load-test your server with synthetic traffic with the suggested [load testing](week-plan-claude-enhanced.md#load-testing) tools. Aim to make your traffic "realistic".
 
 ## Go Deeper
 
-- 
+-
 
 ## Artifact
 
