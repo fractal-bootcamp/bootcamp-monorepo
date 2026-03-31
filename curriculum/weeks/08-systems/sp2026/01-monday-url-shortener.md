@@ -2,7 +2,9 @@
 
 Today we will build a URL shortener similar to Bit.ly or TinyURL. Goal is to be able to handle 1 billion short URLs and 100 million daily active users (DAUs).
 
-Hello Interview's Approach: https://www.youtube.com/watch?v=iUU4O1sWtJA&t=28s
+Example system design approaches:
+- Jordan Has No Life: https://www.youtube.com/watch?v=xFeWVugaouk 
+- Hello Interview: https://www.youtube.com/watch?v=iUU4O1sWtJA
 
 ## Steel Thread
 
