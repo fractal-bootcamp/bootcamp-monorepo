@@ -5,7 +5,7 @@ Today we will build a ticketing service similar to Ticketmaster or Stubhub. Goal
 Example system design approaches:
 
 - Hello Interview: https://www.youtube.com/watch?v=fhdPyoO6aXI
-  - Text description: https://www.hellointerview.com/learn/system-design/problem-breakdowns/ticketmaster
+  - Text guide: https://www.hellointerview.com/learn/system-design/problem-breakdowns/ticketmaster
 - Jordan Has No Life: https://www.youtube.com/watch?v=sMgxHf9AU_U
 
 ## Functional Requirements
