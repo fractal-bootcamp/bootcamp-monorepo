@@ -89,6 +89,9 @@ export function startBot(): void {
 
 /** Schedules all reminder and verification cron jobs. */
 function scheduleJobs(): void {
+  // 2026-05-04: Disable all scheduled jobs since the final bootcamp cohort has finished.
+  return;
+
   scheduleTask(EOD_REMINDER_CRON, () => sendEodReminder(), "EOD reminder");
 
   scheduleTask(
